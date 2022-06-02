@@ -17,10 +17,9 @@ h1 {
   font-size: 50px;
   font-weight: 600;
   text-align: center;
-  margin-top: 100px;
   letter-spacing: 2px;
   font-style: sans-serif;
-  padding: 30px;
+  padding: 20px;
   color: rgb(24, 20, 43);
 }
 .info p {
@@ -45,7 +44,7 @@ h1 {
   color: rgb(40, 40, 94);
 }
 .quote h1 {
-  font-size: 60px;
+  font-size: 50px;
   font-weight: 700;
   color: rgb(76, 13, 87);
   line-height: 1.5;

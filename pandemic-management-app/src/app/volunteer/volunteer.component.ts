@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {  FormGroup,FormBuilder,AbstractControl, NgForm, Validators } from '@angular/forms';
+import {  FormGroup,FormBuilder,AbstractControl,  Validators } from '@angular/forms';
 import { ApiServiceService } from '../api-service.service';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import Validation from '../my-validator';
+import Validation from '../validation';
 
 
 @Component({

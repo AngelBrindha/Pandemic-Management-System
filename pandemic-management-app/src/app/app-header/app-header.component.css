@@ -4,10 +4,14 @@
 .navbar-nav .nav-item .nav-link {
   color: white;
 }
-.navbar-nav .nav-item .nav-link.active-link,
-.navbar-nav .nav-item .nav-link:hover {
+.navbar-nav .nav-item .nav-link.active-link {
   color: #008cf5;
-  background-color: rgb(80, 77, 77);
+  border-radius: 5px;
+  border: 2px solid #008cf5;
+}
+.navbar-nav .nav-item .nav-link:hover {
+  color: white;
+  background-color: #008cf5;
   border-radius: 5px;
 }
 .navbar-brand {
@@ -20,7 +24,7 @@
 }
 #log,
 #ad-log {
-  font-weight: 600;
+  font-weight: 500;
   background-color: rgb(68, 115, 204);
   border-radius: 5px;
   color: white;

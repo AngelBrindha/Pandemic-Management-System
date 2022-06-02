@@ -64,6 +64,7 @@ export class AddvolunteerComponent implements OnInit {
     //angular to couch POST
      this.api.add("pandemic-db", volunteer).subscribe(res => {
       console.log(res);
+
       alert("Your data was posted successfully!");
       
       console.log('data posted')
