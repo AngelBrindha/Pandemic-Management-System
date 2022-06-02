@@ -1,0 +1,47 @@
+.background {
+  background-color: black;
+  padding: 50px;
+}
+table {
+  text-align: center;
+  width: auto;
+  margin: 100px auto;
+}
+table tr,
+table td,
+table th {
+  border: 2px solid white;
+  padding: 10px;
+}
+
+table thead tr th {
+  background-color: #008cf5;
+  color: white;
+}
+table tr td {
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  width: 60px;
+}
+table button {
+  color: white;
+  width: 100px;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-weight: 600;
+}
+.delete {
+  background-color: red;
+}
+.route {
+  color: white;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  background-color: #008cf5;
+  margin-left: 900px;
+  cursor: pointer;
+}

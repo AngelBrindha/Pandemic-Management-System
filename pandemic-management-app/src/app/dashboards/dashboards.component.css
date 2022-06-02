@@ -1,0 +1,28 @@
+.background {
+  background-color: #008cf5;
+  padding: 80px;
+}
+.container {
+  width: 600px;
+  height: auto;
+  padding: 50px;
+  background-color: white;
+  border-radius: 10px;
+}
+h2 {
+  color: black;
+}
+input {
+  margin-bottom: 10px;
+}
+label {
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.sub-btn {
+  display: flex;
+  margin: 10px 140px;
+  gap: 20px;
+}

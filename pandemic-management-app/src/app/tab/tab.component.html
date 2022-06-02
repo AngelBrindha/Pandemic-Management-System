@@ -1,0 +1,24 @@
+<div>
+    <section>
+        <ul class="nav nav-pills">
+
+            <li>
+                <a [class.active]="isTabSelected(10+idx)" href (click)="onTabChange($event,10+idx)">Volunteer</a>
+            </li>
+            <li>
+                <a [class.active]="isTabSelected(20+idx)" href (click)="onTabChange($event,20+idx)">User</a>
+            </li>
+
+        </ul>
+    </section>
+
+    <hr />
+
+    <div class="panel" *ngIf="isTabSelected(10+idx)">
+        <app-listvolunteer></app-listvolunteer>
+    </div>
+    <div class="panel" *ngIf="isTabSelected(20+idx)">
+        <app-listuser></app-listuser>
+    </div>
+
+</div>

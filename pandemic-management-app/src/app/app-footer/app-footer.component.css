@@ -1,0 +1,75 @@
+footer {
+  background-color: rgb(7, 7, 7);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.logo {
+  margin-left: 10px;
+  color: #008cf5;
+  font-weight: 700;
+  font-size: 30px;
+}
+.sec ul li {
+  list-style: none;
+}
+.sec {
+  display: flex;
+  margin: 20px;
+}
+.add {
+  display: flex;
+}
+.add img {
+  margin-top: 5px;
+  margin-right: 20px;
+  width: 20px;
+  height: 20px;
+}
+li {
+  margin-bottom: 20px;
+  padding-right: 20px;
+}
+.sec2,
+.sec3,
+.sec4 {
+  margin-left: 30px;
+  width: 20%;
+}
+.sec2 a,
+.sec3 a,
+.sec4 a {
+  color: white;
+  text-decoration: none;
+}
+.fa {
+  display: flex;
+}
+.fa li {
+  padding: 0px 5px;
+}
+.sec2 li:hover,
+.sec3 li:hover,
+.sec4 :hover {
+  color: #008cf5;
+  cursor: pointer;
+}
+.sec2 a.active-link {
+  text-decoration: none;
+}
+i {
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  display: inline-flex;
+  height: 30px;
+  justify-content: center;
+  text-decoration: none;
+  width: 30px;
+}
+.copy {
+  text-align: center;
+}

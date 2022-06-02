@@ -1,0 +1,54 @@
+<div class="login">
+    <div class="form-container">
+        <div class="left-col">
+            <img src="../../images/log.avif" alt="">
+        </div>
+        <div class="right-col">
+            <div class="logo">
+                <a class="icon" href="#">
+                    <span class="material-icons">
+                        troubleshoot
+                    </span>
+                    PANDEMIC HUB</a>
+            </div>
+            <form action="#" [formGroup]="myForm" (ngSubmit)="login(this.myForm.value)">
+                <div class="log">
+                    <h3>Please login to your account</h3>
+                </div>
+                <div class="field-group" [class.has-error]="email.invalid && email.touched">
+                    <label for="Email">Email Address</label>
+                    <input name='Email' id="Email" value="" type="email" placeholder="Email Address"
+                        formControlName="email" class="form-control" required email>
+                    <div class="help-block text-danger" *ngIf="email.touched">
+                        <span *ngIf="email.errors?.required">
+                            Email Address is REQUIRED!!!
+                        </span>
+                        <span *ngIf="email.errors?.email">
+                            Email was invalid.
+                        </span>
+                    </div>
+                </div>
+                <div class="field-group" [class.has-error]="password.invalid && password.touched">
+                    <label for="password">Password Address</label>
+                    <input name='password' id="password" value="" type="password" placeholder="Password"
+                        formControlName="password" class="form-control" required>
+                    <div class="help-block text-danger" *ngIf="password.touched">
+                        <span *ngIf="password.errors?.required">
+                            Password is REQUIRED!!!
+                        </span>
+                    </div>
+                </div>
+
+                <button type="submit" [disabled]="myForm.invalid">Login</button>
+                <div class="forgot">
+                    <h3>Forgot password ?</h3>
+                </div>
+                <div class="account">
+                    <p>Don't have an account ?</p>
+                    <a href="volunteer">Register here</a>
+                </div>
+                <p class="form-footer">By clicking the button, you are agreeing to our <span>Terms and Services</span>
+                </p>
+            </form>
+        </div>
+    </div>

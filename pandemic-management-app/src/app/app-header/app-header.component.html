@@ -1,0 +1,76 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark " *ngIf="this.api1.show">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <span class="material-icons">
+                troubleshoot
+            </span>
+            PANDEMIC HUB</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" routerLink="" routerLinkActive="active-link"
+                    [routerLinkActiveOptions]="{exact:true}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="about" routerLinkActive="active-link"> About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="contact" routerLinkActive="active-link">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="volunteer" routerLinkActive="active-link">signup</a>
+            </li>
+
+
+            <li class="nav-item">
+
+                <a class="nav-link" id="log" routerLink="login" routerLinkActive="active-link" *ngIf="this.api1.show">
+                    Login </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="ad-log" routerLink="dashboard" routerLinkActive="active-link"
+                    *ngIf="this.api1.show">Admin</a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark " *ngIf="this.api1.logoutshow">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <span class="material-icons">
+                troubleshoot
+            </span>
+            PANDEMIC HUB</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" routerLink="" routerLinkActive="active-link"
+                    [routerLinkActiveOptions]="{exact:true}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="about" routerLinkActive="active-link"> About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="contact" routerLinkActive="active-link">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="volunteer" routerLinkActive="active-link">signup</a>
+            </li>
+
+
+            <li class="nav-item">
+
+                <a class="nav-link" id="log" (click)="logout()">
+                    Logout </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="ad-log" href="#" (click)="dashboard()">Dashboard </a>
+            </li>
+
+        </ul>
+    </div>
+</nav>

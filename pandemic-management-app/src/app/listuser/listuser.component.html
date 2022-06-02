@@ -1,0 +1,34 @@
+<div class="background">
+    <button type="submit" class="btn btn-primary btn-block  mb-4" routerLink="/adduser"
+        routerLinkActive="active-link">Add User</button>
+    <table>
+        <thead>
+            <tr>
+                <th>User Name </th>
+                <th>Gender</th>
+                <th>DOB</th>
+                <th>Postel code </th>
+                <th>Mobile Number</th>
+                <th>Have you ever received a covid-19 vaccination ?</th>
+                <th>If Yes, which vaccination do you have</th>
+                <th>Have you ever take covid test ?</th>
+                <th>If Yes, what is your result ?</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of alluserData">
+                <td>{{ user.user }}</td>
+                <td>{{ user.gender}}</td>
+                <td>{{ user.age }}</td>
+                <td>{{ user.loc }}</td>
+                <td>{{ user.mobile }}</td>
+                <td>{{ user.status }}</td>
+                <td>{{ user.vaccinename }}</td>
+                <td>{{ user.test }}</td>
+                <td>{{ user.result }}</td>
+                <td><button class="delete" (click)="delete(user._id,user._rev)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

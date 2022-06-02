@@ -1,0 +1,93 @@
+<div class="background">
+    <div class="field">
+        <form [formGroup]="userForm" (ngSubmit)="saving(this.userForm.value)">
+            <h1>User Details</h1>
+            <div class="form-group" [class.has-error]="user.invalid && user.touched">
+                <label> User Name :</label>
+                <input placeholder="Enter your name" type="text" id="name" class="form-control" formControlName="user"
+                    required>
+                <div class="help-block text-danger" *ngIf="user.touched">
+                    <span *ngIf="user.errors?.required">
+                        User Name is REQUIRED!!!
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Gender :</label>
+                <input type="radio" id="male" value="Male" name="gender" formControlName="gender">
+                <label for="male">Male</label>
+                <input type="radio" id="female" value="Female" name="gender" formControlName="gender">
+                <label for="female">Female</label><br>
+            </div>
+            <div class="form-group" [class.has-error]="age.invalid && age.touched">
+                <label>Date of Birth :</label>
+                <input placeholder="Enter the dob" type="date" max="2015-12-31" class="form-control"
+                    formControlName="age" required>
+                <div class="help-block text-danger" *ngIf="age.touched">
+                    <span *ngIf="age.errors?.required">
+                        DOB is REQUIRED!!!
+                    </span>
+                </div>
+            </div>
+            <div class="form-group" [class.has-error]="loc.invalid && loc.touched">
+                <label>Location Postel code:</label>
+                <input placeholder="Enter the location postel code" type="text" id="loc" class="form-control"
+                    formControlName="loc" required pattern="[1-9]{1}[0-9]{5}">
+                <div class="help-block text-danger" *ngIf="loc.touched">
+                    <span *ngIf="loc.errors?.required">
+                        Location Postel code is REQUIRED!!!
+                    </span>
+                    <span *ngIf="loc.errors?.pattern">
+                        Location Postel code must have 6 digits and can not start with 0.
+                    </span>
+                </div>
+            </div>
+            <div class="form-group" [class.has-error]="mobile.invalid && mobile.touched">
+                <label>Mobile Number :</label>
+                <input placeholder="Enter your mobile number" pattern="[0-9]{10}" type=number id="mobile"
+                    class="form-control" formControlName="mobile" required>
+                <div class="help-block text-danger" *ngIf="mobile.touched">
+                    <span *ngIf="mobile.errors?.required">
+                        Mobile Number is REQUIRED!!!
+                    </span>
+                    <span *ngIf="mobile.errors?.pattern">
+                        Mobile number must have 10 digits
+                    </span>
+                </div>
+            </div>
+            <div>
+                <br>
+                <h1>Covid related questions</h1>
+                <div class="form-group">
+                    <label>Have you ever received a covid-19 vaccination ?</label><br>
+                    <input type="radio" id="yes" value="Yes" name="status" formControlName="status">
+                    <label for="yes">Yes</label><br>
+                    <input type="radio" id="no" value="No" name="status" formControlName="status">
+                    <label for="no">No</label><br>
+                </div>
+                <div class="form-group">
+                    <label>If Yes, which vaccination do you have :</label>
+                    <input placeholder="Enter the Vaccination Name" type="text" id="vaccinename" class="form-control"
+                        formControlName="vaccinename">
+                </div>
+                <div class="form-group">
+                    <label>Have you ever take covid test ?</label><br>
+                    <input type="radio" id="yes" value="Yes" name="test" formControlName="test">
+                    <label for="yes">Yes</label><br>
+                    <input type="radio" id="no" value="No" name="test" formControlName="test">
+                    <label for="no">No</label><br>
+                </div>
+                <div class="form-group">
+                    <label>If Yes, what is your result ?</label><br>
+                    <input type="text" id="mobile" class="form-control" formControlName="result"><br>
+                </div>
+            </div>
+            <div class="sub-btn">
+                <button class="btn btn-secondary btn-block  mb-4" id="reset" (click)="onReset()">Reset</button><br>
+                <button type="submit" class="btn btn-primary btn-block  mb-4">Submit</button>
+                <button type="submit" class="btn btn-primary btn-block  mb-4" routerLink="/listuser"
+                    routerLinkActive="active-link">View</button>
+            </div>
+        </form>
+    </div>
+</div>

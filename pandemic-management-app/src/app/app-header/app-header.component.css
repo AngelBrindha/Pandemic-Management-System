@@ -1,0 +1,29 @@
+.nav-item {
+  padding: 20px;
+}
+.navbar-nav .nav-item .nav-link {
+  color: white;
+}
+.navbar-nav .nav-item .nav-link.active-link,
+.navbar-nav .nav-item .nav-link:hover {
+  color: #008cf5;
+  background-color: rgb(80, 77, 77);
+  border-radius: 5px;
+}
+.navbar-brand {
+  font-weight: 700;
+  font-size: 30px;
+  color: #008cf5;
+}
+#navbarNav {
+  font-weight: 500;
+}
+#log,
+#ad-log {
+  font-weight: 600;
+  background-color: rgb(68, 115, 204);
+  border-radius: 5px;
+  color: white;
+  border: none;
+  outline: none;
+}

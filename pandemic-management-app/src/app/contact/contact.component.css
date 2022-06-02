@@ -1,0 +1,87 @@
+form {
+  width: 700px;
+  padding: 100px;
+  margin-left: 320px;
+  font-weight: 600;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 3px 10px rgb(37, 37, 37);
+  margin-top: -250px;
+}
+form h1 {
+  text-align: center;
+  color: #13113a;
+  font-size: 30px;
+  font-weight: 600;
+  padding-bottom: 30px;
+}
+.contact {
+  padding: 100px;
+  line-height: 2;
+}
+.contact h1 {
+  font-weight: 700;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+}
+.contact p {
+  font-weight: 400;
+  font-size: 20px;
+  color: rgb(230, 228, 240);
+  text-align: center;
+}
+.background {
+  background-size: cover;
+  background-color: #008cf5;
+  padding-bottom: 300px;
+}
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card1,
+.card2,
+.card3 {
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgb(37, 37, 37);
+  justify-content: space-between;
+  margin: 30px;
+  margin-top: -60px;
+  padding: 30px;
+  background-color: white;
+  width: 500px;
+  height: 150px;
+  cursor: pointer;
+}
+.card1 h5,
+.card2 h5,
+.card3 h5 {
+  font-weight: 500;
+  font-size: 20px;
+  color: rgb(3, 3, 41);
+}
+.card1 img,
+.card2 img,
+.card3 img {
+  background-color: #008cf5;
+  color: #008cf5;
+  border-radius: 50%;
+  padding: 10px;
+}
+.card1 p,
+.card2 p,
+.card3 p {
+  font-weight: 600;
+  font-size: 15px;
+  color: rgb(32, 32, 65);
+  margin-top: -30px;
+  margin-left: 50px;
+}
+.sub-btn {
+  display: flex;
+  margin: 0px 160px;
+  gap: 20px;
+}

@@ -1,0 +1,75 @@
+<div class="background">
+    <div class="field">
+        <form [formGroup]="volunteerForm" (ngSubmit)="saving(this.volunteerForm.value)">
+            <h1>Volunteer Details</h1>
+            <div class="form-group" [class.has-error]="id.invalid && id.touched">
+                <label>Volunteer Id :</label>
+                <input placeholder="Enter incharge id" type="number" id="vol-id" class="form-control"
+                    formControlName="id" required>
+                <div class="help-block text-danger" *ngIf="id.touched">
+                    <span *ngIf="id.errors?.required">
+                        Volunteer Id is REQUIRED!!!
+                    </span>
+                </div>
+            </div>
+            <div class="form-group" [class.has-error]="name.invalid && name.touched">
+                <label> Volunteer Name :</label>
+                <input placeholder="Enter your name" type="text" id="name" required class="form-control"
+                    formControlName="name">
+                <div class="help-block text-danger" *ngIf="name.touched">
+                    <span *ngIf="name.errors?.required">
+                        Volunteer Name is REQUIRED!!!
+                    </span>
+                </div>
+            </div>
+            <div class="form-group" [class.has-error]="email.invalid && email.touched">
+                <label>Email :</label>
+                <input placeholder="Enter Email Address" type="email" required email id="email" class="form-control"
+                    formControlName="email">
+                <div class="help-block text-danger" *ngIf="email.touched">
+                    <span *ngIf="email.errors?.required">
+                        Email Address is REQUIRED!!!
+                    </span>
+                    <span *ngIf="email.errors?.email">
+                        Email was invalid.
+                    </span>
+                </div>
+            </div>
+            <div class="form-group" [class.has-error]="mobilenum.invalid && mobilenum.touched">
+                <label>Mobile Number:</label>
+                <input placeholder="Enter the Mobile number" type="number" required id="mobilenum" class="form-control"
+                    formControlName="mobilenum" pattern="[0-9]{10}">
+                <div class="help-block text-danger" *ngIf="mobilenum.touched">
+                    <span *ngIf="mobilenum.errors?.required">
+                        Mobile Number is REQUIRED!!!
+                    </span>
+                    <span *ngIf="mobilenum.errors?.pattern">
+                        Mobile number must have 10 digits
+                    </span>
+                </div>
+            </div>
+            <div class="form-group" [class.has-error]="location.invalid && location.touched">
+                <label>Incharge Location Postel code:</label>
+                <input placeholder="Enter the incharge location" type="text" required id="location" class="form-control"
+                    formControlName="location" pattern="[1-9]{1}[0-9]{5}">
+                <div class="help-block text-danger" *ngIf="location.touched">
+                    <span *ngIf="location.errors?.required">
+                        Location Postel code is REQUIRED!!!
+                    </span>
+                    <span *ngIf="location.errors?.pattern">
+                        Location Postel code must have 6 digits and can not start with zero.
+                    </span>
+                </div>
+            </div>
+
+            <div class="sub-btn">
+                <button class="btn btn-secondary  btn-block  mb-4" id="reset" (click)="onReset()">Reset</button><br>
+                <button type="submit" class="btn btn-primary  btn-block  mb-4">Submit</button>
+                <button type="submit" class="btn btn-primary  btn-block  mb-4" routerLink="/listvolunteer"
+                    routerLinkActive="active-link">View</button>
+
+
+            </div>
+        </form>
+    </div>
+</div>

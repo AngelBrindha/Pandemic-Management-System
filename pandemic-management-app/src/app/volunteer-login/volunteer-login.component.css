@@ -1,0 +1,82 @@
+.background {
+  background-color: black;
+  display: flex;
+}
+.cards {
+  display: flex;
+  flex-direction: row;
+  padding: 50px;
+  margin-left: 300px;
+  background-color: black;
+}
+.card1,
+.card2 {
+  padding: 10px 50px;
+  border: 5px solid white;
+  margin-right: 30px;
+  transition: transform 0.2s ease;
+}
+.cards a {
+  background-color: #008cf5;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  width: 250px;
+  height: 40px;
+  border-radius: 15px;
+}
+.card1:hover,
+.card2:hover {
+  transform: scale(1.1);
+}
+.card1 a,
+.card2 a {
+  padding: 6px;
+}
+.card1 a {
+  margin-left: 20px;
+}
+.cards a:hover {
+  background-color: white;
+  color: #008cf5;
+}
+span {
+  margin-left: 900px;
+  margin-top: 20px;
+  background-color: #008cf5;
+  color: white;
+  padding: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.left-col {
+  background-color: #008cf5;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding: 40px;
+}
+.left-col a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 10px;
+  transition: transform 0.2s ease;
+}
+.left-col a:hover,
+.left-col img:hover {
+  color: black;
+  transform: scale(1.1);
+}
+.left-col img {
+  padding: 10px;
+  width: 60px;
+}
+.log h1 {
+  font-size: 60px;
+  font-weight: 600;
+  color: #008cf5;
+  margin-left: 340px;
+  margin-top: 40px;
+}

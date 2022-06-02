@@ -1,0 +1,34 @@
+<div class="background">
+    <div class="container">
+        <h2 class="text-uppercase text-center mb-5">Admin login</h2>
+        <form [formGroup]="adminForm" (ngSubmit)="saving(this.adminForm.value)">
+
+            <div class="field-group" [class.has-error]="username.invalid && username.touched">
+                <label for="username">Username : </label>
+                <input name='username' id="username" type="text" placeholder="Enter your username "
+                    formControlName="username" class="form-control" required>
+                <div class="help-block text-danger" *ngIf="username.touched">
+                    <span *ngIf="username.errors?.required">
+                        Username is REQUIRED!!!
+                    </span>
+                </div>
+            </div>
+            <div class="field-group" [class.has-error]="password.invalid && password.touched">
+                <label for="password">Password : </label>
+                <input name='password' id="password" type="password" placeholder="Enter the password "
+                    formControlName="password" class="form-control" required>
+                <div class="help-block text-danger" *ngIf="password.touched">
+                    <span *ngIf="password.errors?.required">
+                        Password is REQUIRED!!!
+                    </span>
+                </div>
+            </div>
+
+            <div class="form-group" class="sub-btn">
+                <button class="btn btn-secondary" (click)="onReset()">Reset</button><br>
+                <button type="submit" class="btn btn-primary" [disabled]="adminForm.invalid">Login</button><br><br>
+
+            </div>
+        </form>
+    </div>
+</div>
