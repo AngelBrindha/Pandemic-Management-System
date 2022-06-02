@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { HttpHeaders } from '@angular/common/http';
 
 
 @Injectable({
@@ -23,12 +22,10 @@ export class ApiAngularService {
     })
   };
   add(db: string, doc: object): Observable<{}> {
-    // const url2 = `${this.url}${db}`;
     const url = this.url + db;
     return this.http.post(url, doc, this.httpOptions)
   }
   get(data:any): Observable<{}> {
-    // const url = this.url + db + '/_all_docs?include_docs=true';
     const url = this.url +'pandemic-db/_find';
     return this.http.post( url,data, this.httpOptions)
 
@@ -40,8 +37,8 @@ export class ApiAngularService {
   return this.http.delete(this.url,this.httpOptions)
   }
   showoff(){
-    this.logoutshow =! this.logoutshow;
-    this.show =! this.show;
+    this.logoutshow = !this.logoutshow;
+    this.show = !this.show;
     console.log(this.show)
   }
 }

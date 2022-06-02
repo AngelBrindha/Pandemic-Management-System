@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup,FormBuilder, Validators, NgForm } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 import { ApiAngularService } from '../api-angular.service';
 import { Router } from '@angular/router';
 
@@ -20,8 +20,7 @@ export class ListuserComponent implements OnInit {
  
 
   ngOnInit(): void {
-    
-
+    console.log('listuser');
     }
    
     saving() {

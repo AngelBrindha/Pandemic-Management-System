@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup,FormBuilder, Validators, NgForm } from '@angular/forms';
+import { FormControl, FormGroup,FormBuilder, Validators } from '@angular/forms';
 import { ApiAngularService } from '../api-angular.service';
 import { Router } from '@angular/router';
 
@@ -17,7 +17,6 @@ export class AdduserComponent implements OnInit {
   data: any;
  alluser: any;
   alluserData: any;
-  maxDate: string | undefined;
  
   constructor(private build:FormBuilder, private api: ApiAngularService, private router:Router) { 
 

@@ -24,10 +24,7 @@ export class ListvolunteerComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
-      
-    
-
+    console.log('listvolunteer');
   }
   
   saving() {

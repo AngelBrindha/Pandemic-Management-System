@@ -12,6 +12,7 @@ export class AppHeaderComponent implements OnInit {
   constructor(public api1: ApiAngularService, private router: Router) { }
 
   ngOnInit(): void {
+    console.log('header');
   }
   logout(){
     this.api1.logoutshow=false;

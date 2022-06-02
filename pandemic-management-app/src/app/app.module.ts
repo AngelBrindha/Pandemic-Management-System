@@ -13,7 +13,7 @@ import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { AppFooterComponent } from './app-footer/app-footer.component';
 import { DashboardsComponent } from './dashboards/dashboards.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AdminComponent } from './admin/admin.component';
 import { AddvolunteerComponent } from './addvolunteer/addvolunteer.component';
@@ -23,7 +23,6 @@ import { ListvolunteerComponent } from './listvolunteer/listvolunteer.component'
 import { ListuserComponent } from './listuser/listuser.component';
 import { TabComponent } from './tab/tab.component';
 import { Tab1Component } from './tab1/tab1.component';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpCallInterceptor } from './interceptor';
 import { ToastrModule } from 'ngx-toastr';
 
