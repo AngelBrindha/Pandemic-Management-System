@@ -61,6 +61,8 @@ export class ListvolunteerComponent implements OnInit {
       this.api.Delete(id,rev).subscribe(res=>{
         console.log(res);
         alert("Deleted sucessfully");
+        window. location. reload();
+
       })
     }
     }
