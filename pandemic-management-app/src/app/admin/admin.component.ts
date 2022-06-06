@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    console.log("admin worked");
+  }
 
   ngOnInit(): void {
+    console.log("admin worked");
   }
 
 }

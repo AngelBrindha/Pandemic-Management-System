@@ -13,15 +13,18 @@ export class TabComponent implements OnInit {
   idx: number = 0;
   currentTab = 1;
 
-  constructor() { }
+  constructor() { 
+    console.log("tab selected")
+  }
 
   ngOnInit(): void {
+    console.log("tab selected")
   }
   isTabSelected(tabIndex: number) {
     return this.currentTab === tabIndex;
   }
   onTabChange(event: any, tabIndex: number) {
-    event.preventDefault(); // To stop flicker
+    event.preventDefault();
     this.currentTab = tabIndex;
     console.log('Tab Selected: ' + this.currentTab);
   }

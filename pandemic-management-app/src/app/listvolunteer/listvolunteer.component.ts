@@ -10,7 +10,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./listvolunteer.component.css']
 })
 export class ListvolunteerComponent implements OnInit {
-  // volunteerForm: FormGroup;
   array:any = [];
   data: any;
   allvolunteer: any;
@@ -40,7 +39,6 @@ export class ListvolunteerComponent implements OnInit {
       ]
     }
     
-    //get the all data
     this.api.get(data).subscribe(res => {
       this.allvolunteer=res;
       console.log(res);

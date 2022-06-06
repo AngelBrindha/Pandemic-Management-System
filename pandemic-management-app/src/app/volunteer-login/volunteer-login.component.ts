@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VolunteerLoginComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    console.log("login sucessfully");
+   }
 
   ngOnInit(): void {
+    console.log("login sucessfully");
   }
 
 }

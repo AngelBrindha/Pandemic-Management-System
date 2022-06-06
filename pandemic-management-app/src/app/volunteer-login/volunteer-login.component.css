@@ -56,7 +56,6 @@
   font-size: 20px;
   text-decoration: none;
   padding: 10px;
-  transition: transform 0.2s ease;
 }
 .left-col a:hover,
 .left-col img:hover {
@@ -64,7 +63,6 @@
   padding: 10px;
   height: 60px;
   color: white;
-  transform: scale(1.1);
 }
 .left-col img {
   padding: 10px;

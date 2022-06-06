@@ -13,9 +13,12 @@ export class Tab1Component implements OnInit {
   idx: number = 0;
   currentTab = 1;
 
-  constructor() { }
+  constructor() {
+    console.log("tab selected")
+   }
 
   ngOnInit(): void {
+    console.log("tab selected")
   }
   isTabSelected(tabIndex: number) {
     return this.currentTab === tabIndex;
