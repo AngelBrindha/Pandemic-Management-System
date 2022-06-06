@@ -19,6 +19,7 @@
   font-weight: 600;
   color: white;
   padding: 30px 100px;
+  line-height: 2;
 }
 .vol,
 .vol1 {
@@ -48,9 +49,8 @@
   background-color: white;
   width: 800px;
 }
-form h1 {
-  font-size: 2rem;
-  font-weight: 600;
+form h3 {
+  font-size: 18px;
   padding-top: 10px;
   text-align: center;
 }
@@ -59,9 +59,10 @@ form {
   font-size: 16px;
   font-weight: 500;
 }
-form h2,
-form h1 {
+form h3,
+form h4 {
   color: black;
+  font-weight: 600;
 }
 label {
   color: black;

@@ -7,8 +7,6 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TabComponent implements OnInit {
 
-  // @Input()
-  // book: any;
   @Input()
   idx: number = 0;
   currentTab = 1;

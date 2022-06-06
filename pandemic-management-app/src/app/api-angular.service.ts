@@ -31,8 +31,6 @@ export class ApiAngularService {
 
   }
   Delete(id: any,rev:any): Observable<{}>  {
-    console.log(id);
-    console.log(rev);
   this.url= this.url+'pandemic-db/'+id+'?rev='+rev;
   return this.http.delete(this.url,this.httpOptions)
   }

@@ -1,7 +1,6 @@
 form {
-  width: 700px;
-  padding: 100px;
-  margin-left: 320px;
+  padding: 50px 150px;
+  margin: 0px 150px;
   font-weight: 600;
   border-radius: 15px;
   background-color: white;
@@ -38,16 +37,12 @@ form h1 {
 }
 .cards {
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .card1,
 .card2,
 .card3 {
-  align-items: center;
   border-radius: 5px;
   box-shadow: 0 3px 10px rgb(37, 37, 37);
-  justify-content: space-between;
   margin: 30px;
   margin-top: -60px;
   padding: 30px;
@@ -71,17 +66,16 @@ form h1 {
   border-radius: 50%;
   padding: 10px;
 }
-.card1 p,
-.card2 p,
-.card3 p {
-  font-weight: 600;
+.card1 span,
+.card2 span,
+.card3 span {
+  font-weight: 500;
   font-size: 15px;
   color: rgb(32, 32, 65);
-  margin-top: -30px;
-  margin-left: 50px;
+  margin-left: 20px;
 }
 .sub-btn {
   display: flex;
-  margin: 0px 160px;
+  margin: 0px 250px;
   gap: 20px;
 }
