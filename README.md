@@ -28,7 +28,7 @@ who was incharge of the users.
                 -Add users
                 -List volunteers
                 -List users
-    -Logout
+    
 
 
 # How to use the project
