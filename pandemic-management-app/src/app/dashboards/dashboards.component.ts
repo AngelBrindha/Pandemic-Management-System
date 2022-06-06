@@ -64,9 +64,9 @@ export class  DashboardsComponent implements OnInit {
 
     saving(Formvalue: any) {
       console.log("from form", Formvalue);
-      this.api.admin_get(Formvalue.username).subscribe((data) => {
+      this.api.adminGet(Formvalue.username).subscribe((data) => {
         if(data.docs[0].username == Formvalue.username && data.docs[0].password == Formvalue.password){
-         this.api1.showoff();
+         this.api1.showOff();
           this.router.navigate(['/admin']);          
           }
           else {

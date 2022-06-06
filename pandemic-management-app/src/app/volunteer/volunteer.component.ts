@@ -12,7 +12,7 @@ import Validation from '../validation';
   styleUrls: ['./volunteer.component.css']
 })
 export class VolunteerComponent implements OnInit {
-  signupForm: FormGroup;
+  signUpForm: FormGroup;
   submitted = false;
   
   userRecord: any ={
@@ -25,7 +25,7 @@ export class VolunteerComponent implements OnInit {
    };
 
   constructor(private api:ApiServiceService, private build:FormBuilder, private http:HttpClient, private router: Router) {
-    this.signupForm=this.build.group({
+    this.signUpForm=this.build.group({
       fullName:[this.userRecord.fullName],
       Username :[this.userRecord.Username],
       emailId:[this.userRecord. emailId],
@@ -40,7 +40,7 @@ export class VolunteerComponent implements OnInit {
 
   ngOnInit(): void {
    
-    this.signupForm = this.build.group(
+    this.signUpForm = this.build.group(
       {
         fullname: ['',Validators.required],
         username:[
@@ -69,7 +69,7 @@ export class VolunteerComponent implements OnInit {
     );
     }
     get f(): {[key:string]:AbstractControl} {
-      return this.signupForm.controls;
+      return this.signUpForm.controls;
     }
     onSubmit(Formvalue:any): void {
       
@@ -78,20 +78,20 @@ export class VolunteerComponent implements OnInit {
         console.log("data returned from server",data);
       })
       this.router.navigate(['/login']);          
-      this.signupForm.reset();
+      this.signUpForm.reset();
       this.submitted=true;
-      if (this.signupForm.invalid) {
+      if (this.signUpForm.invalid) {
         return;
       }
 
-      console.log(JSON.stringify(this.signupForm.value,null,2));
+      console.log(JSON.stringify(this.signUpForm.value,null,2));
       alert("data posted successfully");
       
     }
     
     onReset():void {
       this.submitted=false;
-      this.signupForm.reset();
+      this.signUpForm.reset();
     }
      
   }

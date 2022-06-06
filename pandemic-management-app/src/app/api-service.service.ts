@@ -16,11 +16,11 @@ export class ApiServiceService {
     return this.http.post("http://localhost:8000/contact",formobject)
 }
 
-  test_get(id:any)
+  testGet(id:any)
   {
     return this.http.get<any>('http://localhost:8000/getdata/'+id);
   }
-  admin_get(id:any)
+  adminGet(id:any)
   {
     return this.http.get<any>('http://localhost:8000/getadmindata/'+id);
   }

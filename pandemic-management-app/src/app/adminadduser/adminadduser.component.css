@@ -1,0 +1,26 @@
+.background {
+  background-color: #008cf5;
+  padding: 100px;
+}
+.field {
+  background-color: white;
+  color: black;
+  padding: 100px;
+  border-radius: 5px;
+}
+h1 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 30px;
+}
+label {
+  font-weight: 500;
+  font-size: 16px;
+  margin: 10px;
+}
+.sub-btn {
+  display: flex;
+  margin: 20px 300px;
+  width: 400px;
+  gap: 20px;
+}

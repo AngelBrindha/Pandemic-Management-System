@@ -25,6 +25,7 @@ import { TabComponent } from './tab/tab.component';
 import { Tab1Component } from './tab1/tab1.component';
 import { HttpCallInterceptor } from './interceptor';
 import { ToastrModule } from 'ngx-toastr';
+import { AdminadduserComponent } from './adminadduser/adminadduser.component';
 
 const routes: Routes =[
   {path: '', component: HomeComponent},
@@ -36,6 +37,7 @@ const routes: Routes =[
   {path: 'admin', component: AdminComponent},
   {path: 'addvolunteer', component: AddvolunteerComponent},
   {path: 'adduser', component: AdduserComponent},
+  {path: 'adminadduser', component: AdminadduserComponent},
   {path: 'volunteerlogin', component: VolunteerLoginComponent},
   {path: 'listvolunteer', component: ListvolunteerComponent},
   {path: 'listuser', component: ListuserComponent},
@@ -60,7 +62,8 @@ const routes: Routes =[
     ListvolunteerComponent,
     ListuserComponent,
     TabComponent,
-    Tab1Component
+    Tab1Component,
+    AdminadduserComponent
   ],
   imports: [
     BrowserModule,

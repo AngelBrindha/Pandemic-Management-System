@@ -47,7 +47,7 @@ export class ContactComponent implements OnInit {
  
   onSubmit(form: FormGroup) {
     this.submitted = true;
-    console.log('Valid?', form.valid); // true or false
+    console.log('Valid?', form.valid);
     console.log('firstname', form.value.firstname);
     console.log('lastname', form.value.lastname);
     console.log('address', form.value.address);
@@ -60,7 +60,7 @@ export class ContactComponent implements OnInit {
     this.submitted = false;
     this.contactForm.reset();
 }
-  postuser(Formvalue:NgForm){
+  postUser(Formvalue:NgForm){
     console.log(Formvalue);
     this.api.add1(Formvalue).subscribe(data=>{
       console.log(data);

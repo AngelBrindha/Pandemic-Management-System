@@ -3,19 +3,16 @@ import { FormControl, FormGroup,FormBuilder, Validators } from '@angular/forms';
 import { ApiAngularService } from '../api-angular.service';
 import { Router } from '@angular/router';
 
-
 @Component({
-  selector: 'app-adduser',
-  templateUrl: './adduser.component.html',
-  styleUrls: ['./adduser.component.css']
+  selector: 'app-adminadduser',
+  templateUrl: './adminadduser.component.html',
+  styleUrls: ['./adminadduser.component.css']
 })
-export class AdduserComponent implements OnInit {
+export class AdminadduserComponent implements OnInit {
   userForm: FormGroup;
   submitted = false;
- 
-  constructor(private build:FormBuilder, private api: ApiAngularService, private router:Router) { 
 
-    
+  constructor(private build:FormBuilder, private api: ApiAngularService, private router:Router) {
     this.userForm = this.build.group({
       user:['',[Validators.required]],
       gender: ['',[Validators.required]],
@@ -26,8 +23,7 @@ export class AdduserComponent implements OnInit {
       _rev:['']
 
    });
-   
-  }
+   }
 
   ngOnInit(): void {
     this.userForm = new FormGroup({
@@ -44,7 +40,6 @@ export class AdduserComponent implements OnInit {
     });
     
   this.submitted=true;
-
   }
   get user() {return this.userForm.get('user')!;}
   get gender() {return this.userForm.get('gender')!;}

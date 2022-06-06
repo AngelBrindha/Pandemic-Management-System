@@ -10,8 +10,8 @@ import { Router } from '@angular/router';
 })
 export class ListuserComponent implements OnInit {
   array:any = [];
- alluser: any;
-  alluserData: any;
+ allUser: any;
+  allUserData: any;
   
   constructor(private build:FormBuilder, private api: ApiAngularService, private router:Router) { 
    this.saving()
@@ -37,15 +37,14 @@ export class ListuserComponent implements OnInit {
         ]
       }
       
-      //get the all datapppppp
       this.api.get(data).subscribe(res => {
-        this.alluser=res;
+        this.allUser=res;
         console.log(res);
-        this.alluser = this.alluser.docs;
-        this.alluserData = this.alluser
-        console.log(this.alluserData[0]);
-        for (const array in this.alluserData) {
-          console.log(this.alluserData[array])
+        this.allUser = this.allUser.docs;
+        this.allUserData = this.allUser
+        console.log(this.allUserData[0]);
+        for (const array in this.allUserData) {
+          console.log(this.allUserData[array])
         }
         
       });

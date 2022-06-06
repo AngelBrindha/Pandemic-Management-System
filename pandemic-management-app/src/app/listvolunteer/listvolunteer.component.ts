@@ -12,8 +12,8 @@ import { Router } from '@angular/router';
 export class ListvolunteerComponent implements OnInit {
   array:any = [];
   data: any;
-  allvolunteer: any;
-  allvolunteerData: any;
+  allVolunteer: any;
+  allVolunteerData: any;
   
 
   constructor( private build:FormBuilder, private api: ApiAngularService, private router:Router) { 
@@ -40,13 +40,13 @@ export class ListvolunteerComponent implements OnInit {
     }
     
     this.api.get(data).subscribe(res => {
-      this.allvolunteer=res;
+      this.allVolunteer=res;
       console.log(res);
-      this.allvolunteer = this.allvolunteer.docs;
-      this.allvolunteerData = this.allvolunteer
-      console.log(this.allvolunteerData[0]);
-      for (const array in this.allvolunteerData) {
-        console.log(this.allvolunteerData[array])
+      this.allVolunteer = this.allVolunteer.docs;
+      this.allVolunteerData = this.allVolunteer
+      console.log(this.allVolunteerData[0]);
+      for (const array in this.allVolunteerData) {
+        console.log(this.allVolunteerData[array])
       }
       
     });

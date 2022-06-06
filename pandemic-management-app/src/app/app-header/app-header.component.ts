@@ -14,14 +14,14 @@ export class AppHeaderComponent implements OnInit {
   ngOnInit(): void {
     console.log('header');
   }
-  logout(){
-    this.api1.logoutshow=false;
+  logOut(){
+    this.api1.logOutShow=false;
     this.api1.show=true;
     this.router.navigate(['/login'])
 
   }
   dashboard(){
-    this.api1.logoutshow=false;
+    this.api1.logOutShow=false;
     this.api1.show=true;
     this.router.navigate(['/dashboard'])
 

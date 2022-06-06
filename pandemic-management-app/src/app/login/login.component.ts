@@ -10,11 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  object:any =[];
-
   myForm: FormGroup;
-
-
 
   constructor(private api:ApiServiceService, private build:FormBuilder, private router: Router, private api1: ApiAngularService) {
     this.myForm = this.build.group({
@@ -35,9 +31,9 @@ export class LoginComponent implements OnInit {
   login(Formvalue:any)
   {
     console.log(Formvalue.email);
-    this.api.test_get(Formvalue.email).subscribe((data)=>{
+    this.api.testGet(Formvalue.email).subscribe((data)=>{
        if(data.docs[0].email == Formvalue.email && data.docs[0].password == Formvalue.password){
-         this.api1.showoff();
+         this.api1.showOff();
       this.router.navigate(['/volunteerlogin']);      
       }
       else {

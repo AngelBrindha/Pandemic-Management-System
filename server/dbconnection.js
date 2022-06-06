@@ -1,8 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const dbconnection = require('./nano');
-let app = express(); // Compliant
+const dbConnection = require('./nano');
+let app = express();
 app.disable('x-powered-by');
 let helmet = require('helmet');
 app.use(helmet.hidePoweredBy());
@@ -16,7 +16,7 @@ app.use(
 app.use(bodyParser.json());
 
 app.post('/signup', function (req, _res) {
-  const signupobject = {
+  const signUpObject = {
     fullname: req.body.fullname,
     username: req.body.username,
     email: req.body.email,
@@ -26,8 +26,8 @@ app.post('/signup', function (req, _res) {
     type: 'signup',
   };
 
-  console.log('data from angular', signupobject);
-  dbconnection.pandemic.insert(signupobject).then((data) => {
+  console.log('data from angular', signUpObject);
+  dbConnection.pandemic.insert(signUpObject).then((data) => {
     console.log('data inserted successfully ', data);
   });
 });
@@ -42,7 +42,7 @@ app.get('/getdata/:id', (req, res) => {
     },
   };
 
-  dbconnection.pandemic
+  dbConnection.pandemic
     .find(object)
     .then((data) => {
       console.log('data fetch from db', data);
@@ -53,14 +53,14 @@ app.get('/getdata/:id', (req, res) => {
     });
 });
 app.get('/getadmindata/:id', (_req, res) => {
-  const adminobject = {
+  const adminObject = {
     selector: {
       type: 'admin',
     },
   };
-  console.log(adminobject);
-  dbconnection.pandemic
-    .find(adminobject)
+  console.log(adminObject);
+  dbConnection.pandemic
+    .find(adminObject)
     .then((data) => {
       console.log('data fetch from db', data);
       res.send(data);
@@ -71,7 +71,7 @@ app.get('/getadmindata/:id', (_req, res) => {
 });
 
 app.post('/contact', function (req, _res) {
-  const contactobject = {
+  const contactObject = {
     firstname: req.body.firstname,
     lastname: req.body.lastname,
     address: req.body.address,
@@ -81,8 +81,8 @@ app.post('/contact', function (req, _res) {
     information: req.body.information,
     type: 'contact',
   };
-  console.log('data from angular', contactobject);
-  dbconnection.pandemic.insert(contactobject).then((data) => {
+  console.log('data from angular', contactObject);
+  dbConnection.pandemic.insert(contactObject).then((data) => {
     console.log('data inserted successfully ', data);
   });
 });

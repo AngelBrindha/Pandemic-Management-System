@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiAngularService {
-  logoutshow: boolean=false;
+  logOutShow: boolean=false;
   show: boolean=true;
 
   url='https://784ea086-d974-431c-aa48-7801aa7b2561-bluemix.cloudantnosqldb.appdomain.cloud/'
@@ -34,8 +34,8 @@ export class ApiAngularService {
   this.url= this.url+'pandemic-db/'+id+'?rev='+rev;
   return this.http.delete(this.url,this.httpOptions)
   }
-  showoff(){
-    this.logoutshow = !this.logoutshow;
+  showOff(){
+    this.logOutShow = !this.logOutShow;
     this.show = !this.show;
     console.log(this.show)
   }

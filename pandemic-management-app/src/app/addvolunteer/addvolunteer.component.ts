@@ -13,8 +13,6 @@ import { Router } from '@angular/router';
 export class AddvolunteerComponent implements OnInit {
   volunteerForm: FormGroup;
   submitted = false;
-  array:any = [];
-  data: any;
   
   constructor( private build:FormBuilder, private api: ApiAngularService, private router:Router) { 
     this.volunteerForm = this.build.group({
