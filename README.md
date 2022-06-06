@@ -1,10 +1,7 @@
-# Title
-
-Pandemic Management System (PANDEMIC HUB)
+# Pandemic Management System (PANDEMIC HUB)
 
 # Description
 
-Pandemic Management System :
 Pandemic Management System Software  is used to manage the data of users and admin manage the data of volunteers,
 who was incharge of the users.
 
