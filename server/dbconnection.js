@@ -11,8 +11,8 @@ app.use(
 );
 app.use(bodyParser.json());
 
-app.post('/signup', function (req, res) {
-  var signupobject = {
+app.post('/signup', function (req, _res) {
+  const signupobject = {
     fullname: req.body.fullname,
     username: req.body.username,
     email: req.body.email,
@@ -31,7 +31,7 @@ app.post('/signup', function (req, res) {
 app.get('/getdata/:id', (req, res) => {
   console.log('email:', req.params.id);
   console.log('password:', req.params.id);
-  var object = {
+  const object = {
     selector: {
       email: req.params.id,
       type: 'signup',
@@ -48,8 +48,8 @@ app.get('/getdata/:id', (req, res) => {
       console.log('error', err);
     });
 });
-app.get('/getadmindata/:id', (req, res) => {
-  var adminobject = {
+app.get('/getadmindata/:id', (_req, res) => {
+  const adminobject = {
     selector: {
       type: 'admin',
     },
@@ -66,8 +66,8 @@ app.get('/getadmindata/:id', (req, res) => {
     });
 });
 
-app.post('/contact', function (req, res) {
-  var contactobject = {
+app.post('/contact', function (req, _res) {
+  const contactobject = {
     firstname: req.body.firstname,
     lastname: req.body.lastname,
     address: req.body.address,
