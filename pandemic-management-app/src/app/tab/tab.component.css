@@ -1,5 +1,6 @@
 .nav-pills {
   border-bottom: 1px solid #ddd;
+  width: 1000px;
 }
 .nav-pills li a {
   background: #1f4e79;

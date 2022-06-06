@@ -40,22 +40,18 @@
   font-weight: 600;
   font-size: 18px;
 }
-.vol1 {
-  padding-bottom: 400px;
-}
 .vol-form {
-  padding: 10px 150px;
-  margin: 30px 250px;
-  margin-top: -250px;
+  padding: 50px 150px;
+  margin: 50px 300px;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgb(37, 37, 37);
   background-color: white;
-  width: 900px;
+  width: 800px;
 }
 form h1 {
   font-size: 2rem;
   font-weight: 600;
-  padding-top: 30px;
+  padding-top: 10px;
   text-align: center;
 }
 
@@ -73,6 +69,80 @@ label {
 }
 .sub-btn {
   display: flex;
-  margin: 0px 160px;
+  margin: 0px 140px;
   gap: 20px;
+}
+.wrapper {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wrapper a {
+  display: block;
+  width: 300px;
+  height: 50px;
+  font-size: 18px;
+  padding: 5px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  border: 2px solid #333;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  margin-left: 520px;
+  margin-top: -40px;
+  cursor: pointer;
+}
+
+.wrapper a span {
+  position: relative;
+  z-index: 2;
+}
+
+.wrapper a:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: black;
+  transition: all 0.35s;
+}
+
+.wrapper a:hover {
+  background-color: white;
+  border: 2px solid #333;
+}
+
+.wrapper a:hover:after {
+  width: 100%;
+}
+.modal {
+  display: none;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: black;
+  padding-top: 50px;
+}
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
 }

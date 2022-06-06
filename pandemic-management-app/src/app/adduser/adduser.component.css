@@ -20,6 +20,7 @@ label {
 }
 .sub-btn {
   display: flex;
-  margin: 20px 350px;
+  margin: 20px 300px;
+  width: 400px;
   gap: 20px;
 }
