@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup,FormBuilder, Validators } from '@angular/forms';
 import { ApiAngularService } from '../api-angular.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+
 
 
 
@@ -14,7 +16,7 @@ export class AddvolunteerComponent implements OnInit {
   volunteerForm: FormGroup;
   submitted = false;
   
-  constructor( private build:FormBuilder, private api: ApiAngularService, private router:Router) { 
+  constructor( private build:FormBuilder, private api: ApiAngularService, private router:Router,private toast: ToastrService) { 
     this.volunteerForm = this.build.group({
       id:['',[Validators.required]],
       name:['',[Validators.required]],
@@ -62,10 +64,7 @@ export class AddvolunteerComponent implements OnInit {
     //angular to couch POST
      this.api.add("pandemic-db", volunteer).subscribe(res => {
       console.log(res);
-
-      alert("Your data was posted successfully!");
-      
-      console.log('data posted')
+      this.toast.success('data updated successfully');
       this.volunteerForm.reset();
 
     });

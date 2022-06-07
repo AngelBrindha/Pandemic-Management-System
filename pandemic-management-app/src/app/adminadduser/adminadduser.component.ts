@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup,FormBuilder, Validators } from '@angular/forms';
 import { ApiAngularService } from '../api-angular.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+
 
 @Component({
   selector: 'app-adminadduser',
@@ -12,7 +14,7 @@ export class AdminadduserComponent implements OnInit {
   userForm: FormGroup;
   submitted = false;
 
-  constructor(private build:FormBuilder, private api: ApiAngularService, private router:Router) {
+  constructor(private build:FormBuilder, private api: ApiAngularService, private router:Router,private toast: ToastrService) {
     this.userForm = this.build.group({
       user:['',[Validators.required]],
       gender: ['',[Validators.required]],
@@ -67,8 +69,7 @@ export class AdminadduserComponent implements OnInit {
     
      this.api.add("pandemic-db", user).subscribe(res => {
       console.log(res);
-      alert("Your data was posted successfully!");
-      console.log('data posted')
+      this.toast.success('data updated successfully');
       this.userForm.reset();
     });
     }

@@ -4,6 +4,8 @@ import { ApiServiceService } from '../api-service.service';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import Validation from '../validation';
+import { ToastrService } from 'ngx-toastr';
+
 
 
 @Component({
@@ -24,7 +26,7 @@ export class VolunteerComponent implements OnInit {
 
    };
 
-  constructor(private api:ApiServiceService, private build:FormBuilder, private http:HttpClient, private router: Router) {
+  constructor(private api:ApiServiceService, private build:FormBuilder, private http:HttpClient, private router: Router,private toast: ToastrService) {
     this.signUpForm=this.build.group({
       fullName:[this.userRecord.fullName],
       Username :[this.userRecord.Username],
@@ -76,6 +78,7 @@ export class VolunteerComponent implements OnInit {
       console.log("from form",Formvalue);
       this.api.add(Formvalue).subscribe((data) => {
         console.log("data returned from server",data);
+      this.toast.success('you are registered successfully');
       })
       this.router.navigate(['/login']);          
       this.signUpForm.reset();
@@ -85,7 +88,6 @@ export class VolunteerComponent implements OnInit {
       }
 
       console.log(JSON.stringify(this.signUpForm.value,null,2));
-      alert("data posted successfully");
       
     }
     

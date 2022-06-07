@@ -4,6 +4,8 @@ import { ApiServiceService } from '../api-service.service';
 import { ApiAngularService } from '../api-angular.service';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+
 
 
 
@@ -20,7 +22,7 @@ export class  DashboardsComponent implements OnInit {
     Password:''
 
    };
-  constructor(private fb:FormBuilder,private api:ApiServiceService, private http:HttpClient, private router:Router, private api1: ApiAngularService) { 
+  constructor(private fb:FormBuilder,private api:ApiServiceService, private http:HttpClient, private router:Router, private api1: ApiAngularService,private toast: ToastrService) { 
     this.adminForm = this.fb.group({
       username:['',[Validators.required]],
       password: ['',[Validators.required]]
@@ -67,11 +69,11 @@ export class  DashboardsComponent implements OnInit {
       this.api.adminGet(Formvalue.username).subscribe((data) => {
         if(data.docs[0].username == Formvalue.username && data.docs[0].password == Formvalue.password){
          this.api1.showOff();
+      this.toast.success('login successfully');
           this.router.navigate(['/admin']);          
           }
           else {
-            alert("Enter valid  password");
-      
+        this.toast.error('Invalid  Password');      
             }
      this.submitted=true;
       

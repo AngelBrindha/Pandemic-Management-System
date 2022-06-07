@@ -3,6 +3,8 @@ import { FormControl, FormGroup,FormBuilder, Validators } from '@angular/forms';
 import { ApiServiceService } from '../api-service.service';
 import { ApiAngularService } from '../api-angular.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+
 
 @Component({
   selector: 'app-login',
@@ -12,7 +14,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   myForm: FormGroup;
 
-  constructor(private api:ApiServiceService, private build:FormBuilder, private router: Router, private api1: ApiAngularService) {
+  constructor(private api:ApiServiceService, private build:FormBuilder, private router: Router, private api1: ApiAngularService,private toast: ToastrService) {
     this.myForm = this.build.group({
        email:['',[Validators.required,Validators.email]],
        password: ['',[Validators.required]]
@@ -34,10 +36,11 @@ export class LoginComponent implements OnInit {
     this.api.testGet(Formvalue.email).subscribe((data)=>{
        if(data.docs[0].email == Formvalue.email && data.docs[0].password == Formvalue.password){
          this.api1.showOff();
+      this.toast.success('login successfully');
       this.router.navigate(['/volunteerlogin']);      
       }
       else {
-      alert("please check your password");
+        this.toast.error('Invalid Mail Id or Password');
       }
     }
     )}

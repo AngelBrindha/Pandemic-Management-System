@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup,FormBuilder, NgForm, Validators } from '@angular/forms';
 import { ApiServiceService } from '../api-service.service';
+import { ToastrService } from 'ngx-toastr';
+
 
 
 @Component({
@@ -11,7 +13,7 @@ import { ApiServiceService } from '../api-service.service';
 export class ContactComponent implements OnInit {
   contactForm: FormGroup;
   submitted = false;
-  constructor(private api:ApiServiceService, private build:FormBuilder) {
+  constructor(private api:ApiServiceService, private build:FormBuilder,private toast: ToastrService) {
     
     this.contactForm = this.build.group({
       firstname: ['',[Validators.required,Validators.minLength(3)]],
@@ -64,6 +66,7 @@ export class ContactComponent implements OnInit {
     console.log(Formvalue);
     this.api.add1(Formvalue).subscribe(data=>{
       console.log(data);
+      this.toast.success('data updated successfully');
     })
   }
   }
