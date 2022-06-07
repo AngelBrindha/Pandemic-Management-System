@@ -11,7 +11,7 @@ who was incharge of the users.
 
 2.  PANDEMIC HUB is used to add, delete the users and volunteer information like their vaccination status.
 
-# Project structure
+# Project Flow
 
     - Home
     - About
