@@ -21,8 +21,8 @@ export class AddvolunteerComponent implements OnInit {
       id:['',[Validators.required]],
       name:['',[Validators.required]],
       email: ['', [Validators.required, Validators.email]],
-      mobilenum: ['',[Validators.required]],
-      location: ['',[Validators.required]],
+      mobilenum: ['',[Validators.required],[Validators.pattern("[0-9]{10}$")]],
+      location: ['',[Validators.required],[Validators.pattern("[0-9]{6}$")]],
       _id:[''],
       _rev:['']
 

@@ -21,8 +21,8 @@ export class AdduserComponent implements OnInit {
       user:['',[Validators.required]],
       gender: ['',[Validators.required]],
       age: ['',[Validators.required]],
-      loc: ['',[Validators.required]],
-      mobile: ['',[Validators.required]],
+      loc: ['',[Validators.required],[Validators.pattern("[0-9]{6}$")]],
+      mobile: ['',[Validators.required],[Validators.pattern("[0-9]{10}$")]],
       _id:[''],
       _rev:['']
 
