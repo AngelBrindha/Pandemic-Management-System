@@ -17,10 +17,10 @@ who was incharge of the users.
     - About
     - Contact 
     - Sign up ---> -Create Account
-    - Login ---> -Dashboard
+    - Login (only for volunteers) ---> -Dashboard
                  -Add users
                  -List users
-    -Admin ---> -Admin Dasboard
+    -Admin (only for admin) ---> -Admin Dasboard
                 -Add volunteers
                 -Add users
                 -List volunteers
@@ -34,7 +34,7 @@ who was incharge of the users.
 
 2.  About --> Next you have to know about our service.
 
-3.  Contact --> In contact section, You will know how to contact us and give your credentials and give your queries in it.
+3.  Contact --> In contact , You will know how to contact us and give your details and  queries in it.
 
 4.  Sign up --> First you have to create your account with us.
 
