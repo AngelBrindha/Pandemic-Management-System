@@ -31,15 +31,15 @@
                 </div>
             </div>
             <div class="form-group" [class.has-error]="loc.invalid && loc.touched">
-                <label>Location Postel code:</label>
-                <input placeholder="Enter the location postel code" type="text" id="loc" class="form-control"
+                <label>Location Postal code:</label>
+                <input placeholder="Enter the location postal code" type="text" id="loc" class="form-control"
                     formControlName="loc" required pattern="[1-9]{1}[0-9]{5}">
                 <div class="help-block text-danger" *ngIf="loc.touched">
                     <span *ngIf="loc.errors?.required">
-                        Location Postel code is REQUIRED!!!
+                        Location Postal code is REQUIRED!!!
                     </span>
                     <span *ngIf="loc.errors?.pattern">
-                        Location Postel code must have 6 digits and can not start with 0.
+                        Location Postal code must have 6 digits and can not start with 0.
                     </span>
                 </div>
             </div>
@@ -60,27 +60,37 @@
                 <br>
                 <h1>Covid related questions</h1>
                 <div class="form-group">
-                    <label>Have you ever received a covid-19 vaccination ?</label><br>
-                    <input type="radio" id="yes" value="Yes" name="status" formControlName="status">
-                    <label for="yes">Yes</label><br>
-                    <input type="radio" id="no" value="No" name="status" formControlName="status">
-                    <label for="no">No</label><br>
+                    <label>Have you ever received a covid-19 vaccination ?</label>
+                    <select name="status" id="status" formControlName="status" class="form-control">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label>If Yes, which vaccination do you have :</label>
-                    <input placeholder="Enter the Vaccination Name" type="text" id="vaccinename" class="form-control"
-                        formControlName="vaccinename">
+                    <select name="vaccinename" id="vaccinename" placeholder="choose Vaccination Name"
+                        formControlName="vaccinename" class="form-control">
+                        <option value="Covishield">Covishield</option>
+                        <option value="Covaxin">Covaxin</option>
+                        <option value="Sputnik V ">Sputnik V </option>
+                        <option value="Corbevax">Corbevax</option>
+                        <option value="NA">NA</option>
+                    </select>
                 </div>
                 <div class="form-group">
-                    <label>Have you ever take covid test ?</label><br>
-                    <input type="radio" id="yes" value="Yes" name="test" formControlName="test">
-                    <label for="yes">Yes</label><br>
-                    <input type="radio" id="no" value="No" name="test" formControlName="test">
-                    <label for="no">No</label><br>
+                    <label>Have you ever take covid test ?</label>
+                    <select name="test" id="test" formControlName="test" class="form-control">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
                 </div>
                 <div class="form-group">
-                    <label>If Yes, what is your result ?</label><br>
-                    <input type="text" id="mobile" class="form-control" formControlName="result"><br>
+                    <label>If Yes, what is your result ?</label>
+                    <select name="result" id="result" formControlName="result" class="form-control">
+                        <option value="Positive">Positive</option>
+                        <option value="Negative">Negative</option>
+                        <option value="NA">NA</option>
+                    </select>
                 </div>
             </div>
             <div class="sub-btn">

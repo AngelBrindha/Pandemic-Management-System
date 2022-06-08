@@ -17,14 +17,8 @@ export class AppHeaderComponent implements OnInit {
   logOut(){
     this.api1.logOutShow=false;
     this.api1.show=true;
-    this.router.navigate(['/login'])
 
   }
-  dashboard(){
-    this.api1.logOutShow=false;
-    this.api1.show=true;
-    this.router.navigate(['/dashboard'])
-
-  }
+  
 
 }

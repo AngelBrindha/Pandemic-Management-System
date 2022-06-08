@@ -2,56 +2,75 @@
   background-color: black;
   display: flex;
 }
-.cards {
+.cards{
   display: flex;
-  flex-direction: row;
-  margin-left: 200px;
-  padding: 50px;
+  padding: 40px 70px;
   background-color: black;
+  width: 1107px;
+}
+.cards1 {
+  display: flex;
+  padding: 40px 70px;
+  background-color: black;
+  width: 1107px;
 }
 .card1,
 .card2,
-.card3 {
-  padding: 10px 50px;
-  border: 5px solid white;
-  margin-right: 30px;
-  transition: transform 0.2s ease;
+.card3,
+.card4 {
+  display: flex;
+  background-color: #008cf5;
+  padding: 30px 40px;
+  border-radius: 15px;
+  margin: 0px 50px;
 }
-.cards a {
-  background-color: black;
-  border: 2px solid #008cf5;
+.card3,
+.card4 {
+  width: 330px;
+}
+.card1 img,
+.card3 img {
+  width: 75px;
+}
+.card2 img,
+.card4 img {
+  width: 70px;
+}
+.cards a{
   color: #008cf5;
   text-decoration: none;
-  font-size: 20px;
-  font-weight: 500;
-  width: 250px;
-  height: 40px;
-  border-radius: 15px;
+  font-size: 22px;
+  font-weight: 400;
+  margin: 20px 0px;
+}
+.cards1 a {
+  color: #008cf5;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 400;
+  margin: 20px 20px;
 }
 .card1 a,
 .card2 a,
-.card3 a {
+.card3 a,
+.card4 a {
   padding: 6px;
-}
-.card2 a {
   margin-left: 20px;
-}
-.cards a:hover {
-  background-color: #008cf5;
   color: white;
 }
-.card1:hover,
-.card2:hover,
-.card3:hover {
-  transform: scale(1.1);
+.card4 img{
+  background-color: #008cf5;
+  border-radius: 50%;
 }
+
 .left-col {
   background-color: #008cf5;
   display: flex;
   flex-direction: column;
   height: auto;
   padding: 10px;
-  width: 300px;
+  width: 250px;
+  position: sticky;
 }
 .left-col button {
   color: white;
@@ -62,7 +81,7 @@
   background-color: #008cf5;
 }
 .left-col button:hover {
-  background-color: rgb(0, 0, 0, 1);
+  background-color: rgb(3, 3, 3, 0.9);
   padding: 10px;
   color: white;
 }
@@ -71,9 +90,9 @@
   width: 60px;
 }
 .log h1 {
-  font-size: 60px;
-  font-weight: 600;
+  font-size: 50px;
+  font-weight: 500;
   color: #008cf5;
-  margin-left: 270px;
+  margin-left: 340px;
   margin-top: 40px;
 }

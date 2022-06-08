@@ -18,10 +18,11 @@
   display: flex;
   flex-direction: row;
 }
-img {
-  padding-bottom: 55px;
+.left-col img {
+  padding-bottom: 100px;
   margin-top: -80px;
   margin-left: -80px;
+  
 }
 
 .right-col {

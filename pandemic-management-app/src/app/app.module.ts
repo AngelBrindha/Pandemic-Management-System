@@ -22,7 +22,6 @@ import { VolunteerLoginComponent } from './volunteer-login/volunteer-login.compo
 import { ListvolunteerComponent } from './listvolunteer/listvolunteer.component';
 import { ListuserComponent } from './listuser/listuser.component';
 import { TabComponent } from './tab/tab.component';
-import { Tab1Component } from './tab1/tab1.component';
 import { HttpCallInterceptor } from './interceptor';
 import { ToastrModule } from 'ngx-toastr';
 import { AdminadduserComponent } from './adminadduser/adminadduser.component';
@@ -62,7 +61,6 @@ const routes: Routes =[
     ListvolunteerComponent,
     ListuserComponent,
     TabComponent,
-    Tab1Component,
     AdminadduserComponent
   ],
   imports: [

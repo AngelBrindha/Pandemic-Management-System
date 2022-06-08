@@ -17,11 +17,47 @@
         </div>
         <div class="cards">
             <div class="card1">
-                <img src="../../images/blueuser.png" alt="icon" width="140px"><br><br><br><br>
+                <img src="../../images/blueuser.png" alt="icon" width="140px">
                 <a href="adduser">Add User</a>
             </div>
+            <div class="card2">
+                <img src="../../images/icons8-person-66.png" alt="icon" width="140px">
+                <a href="listuser">List User</a>
+            </div>
         </div>
-        <app1-tab></app1-tab>
+        <div class="background">
+            <table>
+                <caption></caption>
+                <thead>
+                    <tr>
+                        <th>User Name </th>
+                        <th>Gender</th>
+                        <th>DOB</th>
+                        <th>Postel code </th>
+                        <th>Mobile Number</th>
+                        <th>Have you ever received a covid-19 vaccination ?</th>
+                        <th>If Yes, which vaccination do you have</th>
+                        <th>Have you ever take covid test ?</th>
+                        <th>If Yes, what is your result ?</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of allUserData">
+                        <td>{{ user.user }}</td>
+                        <td>{{ user.gender}}</td>
+                        <td>{{ user.age }}</td>
+                        <td>{{ user.loc }}</td>
+                        <td>{{ user.mobile }}</td>
+                        <td>{{ user.status }}</td>
+                        <td>{{ user.vaccinename }}</td>
+                        <td>{{ user.test }}</td>
+                        <td>{{ user.result }}</td>
+                        <td><button class="delete" (click)="delete(user._id,user._rev)">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
     </div>
 </div>

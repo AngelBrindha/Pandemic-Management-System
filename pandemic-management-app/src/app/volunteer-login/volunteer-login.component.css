@@ -1,4 +1,4 @@
-.background {
+/* .background {
   background-color: black;
   display: flex;
 }
@@ -74,4 +74,132 @@
   color: #008cf5;
   margin-left: 340px;
   margin-top: 40px;
+} */
+
+.background {
+  background-color: black;
+  display: flex;
+}
+.cards {
+  display: flex;
+  padding:  40px 70px;
+  background-color: black;
+  width: 1107px
+}
+.card1,
+.card2 {
+  display: flex;
+  background-color: #008cf5;
+  padding: 30px 40px;
+  border-radius: 15px;
+  margin: 0px 60px;
+
+  
+}
+.card1 img,
+.card2 img {
+  width: 75px;
+}
+.cards a {
+  color: #008cf5;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 400;
+  margin: 20px 0px;
+  
+}
+
+.card1 a,
+.card2 a{
+  padding: 6px;
+  margin-left: 20px;
+  color: white;
+}
+.card2 img{
+  background-color: #008cf5;
+  border-radius: 50%;
+}
+
+.left-col {
+  background-color: #008cf5;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding: 10px;
+  width: 250px;
+  position: sticky;
+}
+.left-col button {
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: #008cf5;
+}
+.left-col button:hover {
+  background-color: rgb(3, 3, 3, 0.9);
+  padding: 10px;
+  color: white;
+}
+.left-col img {
+  padding: 10px;
+  width: 60px;
+}
+.log h1 {
+  font-size: 50px;
+  font-weight: 500;
+  color: #008cf5;
+  margin-left: 340px;
+  margin-top: 40px;
+}
+
+
+
+table {
+  text-align: center;
+  width: 1000px;
+  margin: 30px auto;
+}
+table tr,
+table td,
+table th {
+  border: 2px solid rgb(255, 255, 255, 0.5);
+  padding: 10px;
+}
+
+table thead tr th {
+  background-color: #008cf5;
+  color: rgb(255, 255, 255, 0.9);
+}
+table tr td {
+  color: rgb(255, 255, 255, 0.5);
+  font-size: 15px;
+  font-weight: 500;
+  width: 60px;
+}
+table button {
+  color: rgb(255, 255, 255, 0.9);
+  width: 100px;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-weight: 600;
+}
+.delete {
+  background-color: red;
+  border-radius: 5px;
+}
+.delete:hover {
+  transform: scale(0.9);
+}
+.route {
+  color: white;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  background-color: #008cf5;
+  margin-left: 900px;
+  cursor: pointer;
 }

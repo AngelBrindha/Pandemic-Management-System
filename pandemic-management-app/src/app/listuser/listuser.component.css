@@ -1,11 +1,11 @@
 .background {
   background-color: black;
-  padding: 50px;
+  padding: 30px;
 }
 table {
   text-align: center;
   width: auto;
-  margin: 100px auto;
+  margin: 30px auto;
 }
 table tr,
 table td,
@@ -21,7 +21,7 @@ table thead tr th {
 table tr td {
   color: white;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 400;
   width: 60px;
 }
 table button {
@@ -39,13 +39,7 @@ table button {
 .delete:hover {
   transform: scale(0.9);
 }
-.route {
-  color: white;
-  height: 40px;
-  border: none;
-  outline: none;
-  font-weight: 600;
-  background-color: #008cf5;
-  margin-left: 900px;
-  cursor: pointer;
+.btn {
+  margin: 0px 100px;
 }
+

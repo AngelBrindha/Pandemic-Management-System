@@ -21,6 +21,10 @@ export class AdminadduserComponent implements OnInit {
       age: ['',[Validators.required]],
       loc: ['',[Validators.required],[Validators.pattern("[1-9]{1}[0-9]{5}$")]],
       mobile: ['',[Validators.required],[Validators.pattern("[0-9]{10}$")]],
+      status: [''],
+      vaccinename: [''],
+      test: [''],
+      result: [''],
       _id:[''],
       _rev:['']
 
@@ -48,6 +52,10 @@ export class AdminadduserComponent implements OnInit {
   get age() {return this.userForm.get('age')!;}
   get loc() {return this.userForm.get('loc')!;}
   get mobile() {return this.userForm.get('mobile')!;}
+  get status() {return this.userForm.get('status')!;}
+  get vaccinename() {return this.userForm.get('vaccinename')!;}
+  get test() {return this.userForm.get('test')!;}
+  get result() {return this.userForm.get('result')!;}
 
   saving(Formvalue: any) {
     const date = new Date();

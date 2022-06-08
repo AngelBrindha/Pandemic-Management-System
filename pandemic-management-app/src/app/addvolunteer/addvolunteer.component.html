@@ -50,15 +50,15 @@
                 </div>
             </div>
             <div class="form-group" [class.has-error]="location.invalid && location.touched">
-                <label>Incharge Location Postel code:</label>
+                <label>Incharge Location Postal code:</label>
                 <input placeholder="Enter the incharge location" type="text" required id="location" class="form-control"
                     formControlName="location" pattern="[1-9]{1}[0-9]{5}">
                 <div class="help-block text-danger" *ngIf="location.touched">
                     <span *ngIf="location.errors?.required">
-                        Location Postel code is REQUIRED!!!
+                        Location Postal code is REQUIRED!!!
                     </span>
                     <span *ngIf="location.errors?.pattern">
-                        Location Postel code must have 6 digits and can not start with zero.
+                        Location Postal code must have 6 digits and can not start with zero.
                     </span>
                 </div>
             </div>

@@ -20,7 +20,7 @@ export class ContactComponent implements OnInit {
       lastname: [''],
       address: [''],
        email:['',[Validators.required,Validators.email]],
-       mobile: ['',[Validators.required]],
+       mobile: ['',[Validators.required],[Validators.pattern("[0-9]{10}$")]],
        help: [''],
        information: ['']
     });

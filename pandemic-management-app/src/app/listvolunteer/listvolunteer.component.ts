@@ -14,6 +14,7 @@ export class ListvolunteerComponent implements OnInit {
   data: any;
   allVolunteer: any;
   allVolunteerData: any;
+  boolean = true;
   
 
   constructor( private build:FormBuilder, private api: ApiAngularService, private router:Router) { 
@@ -53,12 +54,17 @@ export class ListvolunteerComponent implements OnInit {
     
     }
     delete(id:any,rev:any){
-      this.api.Delete(id,rev).subscribe(res=>{
-        console.log(res);
-        alert("Deleted sucessfully");
-        window. location. reload();
+      if (confirm("Do you really want to delete ?") === true) {
+        this.api.Delete(id,rev).subscribe(res=>{
+          console.log(res);
+          window. location. reload();
 
-      })
+        })
+      } else {
+        window. location. reload();
+      }
+     
+       
     }
     }
   
