@@ -100,9 +100,9 @@ export class AdduserComponent implements OnInit {
   }
  }
  onChangeInputField(value: any) {
-  if (value == 'yes') {
+  if (value == 'Yes') {
   this.isInputFieldVisible = true;
-  } else if (value == 'no') {
+  } else if (value == 'No') {
   this.isInputFieldVisible = false;
 }
 }
