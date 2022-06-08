@@ -1,0 +1,69 @@
+.volunteer {
+  line-height: 2;
+  display: flex;
+}
+.left-col {
+  width: 750px;
+}
+.logo a,
+.logo span {
+  font-weight: 700;
+  font-size: 30px;
+  color: #008cf5;
+  text-decoration: none;
+  margin-bottom: 30px;
+}
+
+.vol-form {
+  padding: 50px;
+  margin: 50px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgb(37, 37, 37);
+  background-color: white;
+  width: 700px;
+}
+.content {
+  background-color: #008cf5;
+  height: 1350px;
+  padding: 100px;
+}
+.content img {
+  width: 400px;
+  height: 350px;
+}
+.content h1 {
+  color: white;
+  font-size: 50px;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+.content h3 {
+  color: white;
+  font-size: 30px;
+  margin: 30px 0px;
+}
+.content p {
+  color: white;
+  font-size: 18px;
+}
+form h3 {
+  font-size: 18px;
+  padding-top: 10px;
+  text-align: center;
+  color: black;
+  font-weight: 600;
+}
+
+form {
+  font-size: 16px;
+  font-weight: 500;
+}
+label {
+  color: black;
+  font-weight: 500;
+}
+.sub-btn {
+  display: flex;
+  margin: 0px 140px;
+  gap: 20px;
+}

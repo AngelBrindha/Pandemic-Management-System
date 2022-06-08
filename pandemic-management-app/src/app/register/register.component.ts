@@ -6,14 +6,12 @@ import { Router } from '@angular/router';
 import Validation from '../validation';
 import { ToastrService } from 'ngx-toastr';
 
-
-
 @Component({
-  selector: 'app-volunteer',
-  templateUrl: './volunteer.component.html',
-  styleUrls: ['./volunteer.component.css']
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
 })
-export class VolunteerComponent implements OnInit {
+export class RegisterComponent implements OnInit {
   signUpForm: FormGroup;
   submitted = false;
   
@@ -26,7 +24,7 @@ export class VolunteerComponent implements OnInit {
 
    };
 
-  constructor(private api:ApiServiceService, private build:FormBuilder, private http:HttpClient, private router: Router,private toast: ToastrService) {
+   constructor(private api:ApiServiceService, private build:FormBuilder, private http:HttpClient, private router: Router,private toast: ToastrService) {
     this.signUpForm=this.build.group({
       fullName:[this.userRecord.fullName],
       Username :[this.userRecord.Username],
@@ -40,7 +38,7 @@ export class VolunteerComponent implements OnInit {
     
    }
 
-  ngOnInit(): void {
+   ngOnInit(): void {
    
     this.signUpForm = this.build.group(
       {
@@ -80,7 +78,6 @@ export class VolunteerComponent implements OnInit {
         console.log("data returned from server",data);
       this.toast.success('you are registered successfully');
       })
-      this.router.navigate(['/login']);          
       this.signUpForm.reset();
       this.submitted=true;
       if (this.signUpForm.invalid) {
@@ -88,6 +85,8 @@ export class VolunteerComponent implements OnInit {
       }
 
       console.log(JSON.stringify(this.signUpForm.value,null,2));
+      this.router.navigate(['/login']);          
+
       
     }
     
@@ -97,7 +96,3 @@ export class VolunteerComponent implements OnInit {
     }
      
   }
-
-
-
-
