@@ -25,6 +25,7 @@ import { HttpCallInterceptor } from './interceptor';
 import { ToastrModule } from 'ngx-toastr';
 import { AdminadduserComponent } from './adminadduser/adminadduser.component';
 import { RegisterComponent } from './register/register.component';
+import { ListcontactComponent } from './listcontact/listcontact.component';
 
 const routes: Routes =[
   {path: '', component: HomeComponent},
@@ -40,6 +41,7 @@ const routes: Routes =[
   {path: 'volunteerlogin', component: VolunteerLoginComponent},
   {path: 'listvolunteer', component: ListvolunteerComponent},
   {path: 'listuser', component: ListuserComponent},
+  {path: 'listcontact', component: ListcontactComponent},
 ];
 
 
@@ -61,7 +63,8 @@ const routes: Routes =[
     ListuserComponent,
     TabComponent,
     AdminadduserComponent,
-    RegisterComponent
+    RegisterComponent,
+    ListcontactComponent
   ],
   imports: [
     BrowserModule,

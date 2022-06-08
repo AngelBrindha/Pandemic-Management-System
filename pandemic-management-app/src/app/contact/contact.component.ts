@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup,FormBuilder, NgForm, Validators } from '@angular/forms';
-import { ApiServiceService } from '../api-service.service';
+import { FormControl, FormGroup,FormBuilder, Validators } from '@angular/forms';
+import { ApiAngularService } from '../api-angular.service';
 import { ToastrService } from 'ngx-toastr';
 
 
@@ -13,15 +13,15 @@ import { ToastrService } from 'ngx-toastr';
 export class ContactComponent implements OnInit {
   contactForm: FormGroup;
   submitted = false;
-  constructor(private api:ApiServiceService, private build:FormBuilder,private toast: ToastrService) {
+  constructor(private api:ApiAngularService, private build:FormBuilder,private toast: ToastrService) {
     
     this.contactForm = this.build.group({
       firstname: ['',[Validators.required,Validators.minLength(3)]],
-      lastname: [''],
-      address: [''],
+      lastname: ['',[Validators.required,Validators.minLength(3)]],
+      address: ['',[Validators.required]],
        email:['',[Validators.required,Validators.email]],
        mobile: ['',[Validators.required],[Validators.pattern("[0-9]{10}$")]],
-       help: [''],
+       help: ['',[Validators.required]],
        information: ['']
     });
     
@@ -43,32 +43,51 @@ export class ContactComponent implements OnInit {
 
 
   get firstname() {return this.contactForm.get('firstname')!;} 
+  get lastname() {return this.contactForm.get('lastname')!;} 
+  get address() {return this.contactForm.get('address')!;} 
   get email() {return this.contactForm.get('email')!;}
   get mobile() {return this.contactForm.get('mobile')!;}
+  get help() {return this.contactForm.get('help')!;} 
+  get information() {return this.contactForm.get('information')!;} 
+
    
- 
-  onSubmit(form: FormGroup) {
-    this.submitted = true;
-    console.log('Valid?', form.valid);
-    console.log('firstname', form.value.firstname);
-    console.log('lastname', form.value.lastname);
-    console.log('address', form.value.address);
-    console.log('email', form.value.email);
-    console.log('mobile', form.value.mobile);
-    console.log('help', form.value.help);
-    console.log('information', form.value.information);
-  }
   onReset() {
     this.submitted = false;
     this.contactForm.reset();
 }
-  postUser(Formvalue:NgForm){
-    console.log(Formvalue);
-    this.api.add1(Formvalue).subscribe(data=>{
-      console.log(data);
+  // postUser(Formvalue:NgForm){
+  //   console.log(Formvalue);
+  //   this.api.add1(Formvalue).subscribe(data=>{
+  //     console.log(data);
+  //     this.toast.success('data updated successfully');
+  //     this.contactForm.reset();
+
+  //   })
+  // }
+  saving(Formvalue: any) {
+
+    const date = new Date();
+    const contact = {
+      firstname: Formvalue.firstname,
+      lastname: Formvalue.lastname,
+      address: Formvalue.address,
+      email: Formvalue.email,
+      mobile: Formvalue.mobile,
+      help: Formvalue.help,
+      information: Formvalue.information,
+      type: "contact",
+      createdBy:date
+
+
+    }
+    //angular to couch POST
+     this.api.add("pandemic-db", contact).subscribe(res => {
+      console.log(res);
       this.toast.success('data updated successfully');
-    })
-  }
+      this.contactForm.reset();
+
+    });
+        }
   }
 
 

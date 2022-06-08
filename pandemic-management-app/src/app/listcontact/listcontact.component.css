@@ -1,0 +1,38 @@
+.background {
+    background-color: black;
+    padding: 30px;
+  }
+  
+  table {
+    text-align: center;
+    width: auto;
+    margin: 30px auto;
+  }
+  table tr,
+  table td,
+  table th {
+    border: 2px solid white;
+    padding: 10px;
+  }
+  
+  table thead tr th {
+    background-color: #008cf5;
+    color: white;
+  }
+  table tr td {
+    color: rgb(255, 251, 251);
+    font-size: 15px;
+    font-weight: 500;
+  }
+  table button {
+    color: white;
+    width: 100px;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-weight: 600;
+  }
+  .btn {
+    margin-left: 180px;
+  }
+  

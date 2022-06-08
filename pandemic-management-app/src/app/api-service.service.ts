@@ -11,10 +11,6 @@ export class ApiServiceService {
       return this.http.post("http://localhost:8000/signup",formObject)
 
   }
-  
-  add1(formObject:any){
-    return this.http.post("http://localhost:8000/contact",formObject)
-}
 
   testGet(id:any)
   {

@@ -70,23 +70,6 @@ app.get('/getadmindata/:id', (_req, res) => {
     });
 });
 
-app.post('/contact', function (req, _res) {
-  const contactObject = {
-    firstname: req.body.firstname,
-    lastname: req.body.lastname,
-    address: req.body.address,
-    email: req.body.email,
-    mobile: req.body.mobile,
-    help: req.body.help,
-    information: req.body.information,
-    type: 'contact',
-  };
-  console.log('data from angular', contactObject);
-  dbConnection.pandemic.insert(contactObject).then((data) => {
-    console.log('data inserted successfully ', data);
-  });
-});
-
 app.listen(port, (err) => {
   if (err) {
     return console.log('something bad happened', err);
