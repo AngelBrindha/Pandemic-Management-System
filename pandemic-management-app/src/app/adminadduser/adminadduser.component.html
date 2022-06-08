@@ -61,12 +61,13 @@
                 <h1>Covid related questions</h1>
                 <div class="form-group">
                     <label>Have you ever received a covid-19 vaccination ?</label>
-                    <select name="status" id="status" formControlName="status" class="form-control">
+                    <select name="status" id="status" formControlName="status" class="form-control"
+                        (change)="onChangeSecondInputField($event.target.value)">
                         <option value="Yes">Yes</option>
                         <option value="No">No</option>
                     </select>
                 </div>
-                <div class="form-group">
+                <div class="form-group" *ngIf="isThirdInputFieldVisible">
                     <label>If Yes, which vaccination do you have :</label>
                     <select name="vaccinename" id="vaccinename" placeholder="choose Vaccination Name"
                         formControlName="vaccinename" class="form-control">
@@ -74,22 +75,20 @@
                         <option value="Covaxin">Covaxin</option>
                         <option value="Sputnik V ">Sputnik V </option>
                         <option value="Corbevax">Corbevax</option>
-                        <option value="NA">NA</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label>Have you ever take covid test ?</label>
-                    <select name="test" id="test" formControlName="test" class="form-control">
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
+                    <select name="test" id="test" formControlName="test" class="form-control" (change)="onChangeInputField($event.target.value)">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
                     </select>
                 </div>
-                <div class="form-group">
+                <div class="form-group" *ngIf="isInputFieldVisible">
                     <label>If Yes, what is your result ?</label>
                     <select name="result" id="result" formControlName="result" class="form-control">
                         <option value="Positive">Positive</option>
                         <option value="Negative">Negative</option>
-                        <option value="NA">NA</option>
                     </select>
                 </div>
             </div>

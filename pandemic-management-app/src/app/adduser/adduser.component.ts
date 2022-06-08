@@ -13,6 +13,8 @@ import { ToastrService } from 'ngx-toastr';
 export class AdduserComponent implements OnInit {
   userForm: FormGroup;
   submitted = false;
+  isThirdInputFieldVisible: boolean = false;
+  isInputFieldVisible: boolean = false;
  
   constructor(private build:FormBuilder, private api: ApiAngularService, private router:Router,private toast: ToastrService) { 
 
@@ -90,4 +92,18 @@ export class AdduserComponent implements OnInit {
     this.submitted=false;
     this.userForm.reset();
   }
+  onChangeSecondInputField(value: any) {
+    if (value == 'Yes') {
+    this.isThirdInputFieldVisible = true;
+    } else if (value == 'No') {
+    this.isThirdInputFieldVisible = false;
+  }
+ }
+ onChangeInputField(value: any) {
+  if (value == 'yes') {
+  this.isInputFieldVisible = true;
+  } else if (value == 'no') {
+  this.isInputFieldVisible = false;
+}
+}
 }
