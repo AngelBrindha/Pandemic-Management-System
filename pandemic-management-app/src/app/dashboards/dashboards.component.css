@@ -9,9 +9,18 @@
   background-color: white;
   border-radius: 10px;
 }
+.logo a,
+.logo span {
+  font-weight: 700;
+  font-size: 30px;
+  color: #008cf5;
+  text-decoration: none;
+  margin-bottom: 30px;
+  margin-left: 55px;
+}
 h2 {
   color: black;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 500;
 }
 input {
