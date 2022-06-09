@@ -15,9 +15,7 @@ import { ApiAngularService } from '../api-angular.service';
 export class RegisterComponent implements OnInit {
   signUpForm: FormGroup;
   submitted = false;
-  check=0;
   submit=false;
-  objectArray: any =[]
   
   userRecord: any ={
     fullName:'',

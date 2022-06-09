@@ -55,15 +55,6 @@ export class ContactComponent implements OnInit {
     this.submitted = false;
     this.contactForm.reset();
 }
-  // postUser(Formvalue:NgForm){
-  //   console.log(Formvalue);
-  //   this.api.add1(Formvalue).subscribe(data=>{
-  //     console.log(data);
-  //     this.toast.success('data updated successfully');
-  //     this.contactForm.reset();
-
-  //   })
-  // }
   saving(Formvalue: any) {
 
     const date = new Date();
@@ -80,7 +71,7 @@ export class ContactComponent implements OnInit {
 
 
     }
-    //angular to couch POST
+    
      this.api.add("pandemic-db", contact).subscribe(res => {
       console.log(res);
       this.toast.success('data updated successfully');
