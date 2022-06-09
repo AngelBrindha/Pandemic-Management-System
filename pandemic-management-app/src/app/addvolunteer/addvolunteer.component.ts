@@ -66,7 +66,9 @@ export class AddvolunteerComponent implements OnInit {
       console.log(res);
       this.toast.success('data updated successfully');
       this.volunteerForm.reset();
-
+    },
+    (rej) => {
+      this.toast.error('Unable to update',rej);
     });
         }
 

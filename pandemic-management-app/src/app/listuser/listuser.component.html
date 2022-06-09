@@ -1,35 +1,37 @@
 <div class="background">
-    <button type="submit" class="btn btn-primary btn-block  mb-4" routerLink="/adduser"
-        routerLinkActive="active-link">Add User</button>
-    <table>
-        <caption></caption>
-        <thead>
-            <tr>
-                <th>User Name </th>
-                <th>Gender</th>
-                <th>Date of Birth</th>
-                <th>Postel code </th>
-                <th>Mobile Number</th>
-                <th>Vaccination Status</th>
-                <th>Vaccination Type</th>
-                <th>Covid Test</th>
-                <th>Result</th>
-                <th>Delete</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let user of allUserData">
-                <td>{{ user.user }}</td>
-                <td>{{ user.gender}}</td>
-                <td>{{ user.age }}</td>
-                <td>{{ user.loc }}</td>
-                <td>{{ user.mobile }}</td>
-                <td>{{ user.status }}</td>
-                <td>{{ user.vaccinename }}</td>
-                <td>{{ user.test }}</td>
-                <td>{{ user.result }}</td>
-                <td><button class="delete" (click)="delete(user._id,user._rev)">Delete</button></td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="container">
+        <button type="submit" class="btn  btn-block  mb-4" routerLink="/adduser"
+            routerLinkActive="active-link">Add User</button>
+        <table>
+            <caption></caption>
+            <thead>
+                <tr>
+                    <th>User Name </th>
+                    <th>Gender</th>
+                    <th>Date of Birth</th>
+                    <th>Postel code </th>
+                    <th>Mobile Number</th>
+                    <th>Vaccination Status</th>
+                    <th>Vaccination Type</th>
+                    <th>Covid Test</th>
+                    <th>Result</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of allUserData">
+                    <td>{{ user.user }}</td>
+                    <td>{{ user.gender}}</td>
+                    <td>{{ user.dob }}</td>
+                    <td>{{ user.loc }}</td>
+                    <td>{{ user.mobile }}</td>
+                    <td>{{ user.status }}</td>
+                    <td>{{ user.vaccinename }}</td>
+                    <td>{{ user.test }}</td>
+                    <td>{{ user.result }}</td>
+                    <td><button class="delete" (click)="delete(user._id,user._rev)">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

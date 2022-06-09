@@ -15,7 +15,7 @@ app.use(
 );
 app.use(bodyParser.json());
 
-app.post('/signup', function (req, _res) {
+app.post('/signup', function (req, res) {
   const signUpObject = {
     fullname: req.body.fullname,
     username: req.body.username,
@@ -27,9 +27,16 @@ app.post('/signup', function (req, _res) {
   };
 
   console.log('data from angular', signUpObject);
-  dbConnection.pandemic.insert(signUpObject).then((data) => {
-    console.log('data inserted successfully ', data);
-  });
+  dbConnection.pandemic
+    .insert(signUpObject)
+    .then((data) => {
+      console.log('data inserted successfully ', data);
+    }).catch((err =>{
+      console.log("error",err);
+      res.status(400).send({
+          message: err
+      })
+  }));
 });
 
 app.get('/getdata/:id', (req, res) => {
@@ -48,9 +55,12 @@ app.get('/getdata/:id', (req, res) => {
       console.log('data fetch from db', data);
       res.send(data);
     })
-    .catch((err) => {
+    .catch((err => {
       console.log('error', err);
-    });
+      res.status(400).send({
+        message: err,
+      });
+    }));
 });
 app.get('/getadmindata/:id', (_req, res) => {
   const adminObject = {
@@ -65,9 +75,12 @@ app.get('/getadmindata/:id', (_req, res) => {
       console.log('data fetch from db', data);
       res.send(data);
     })
-    .catch((err) => {
+    .catch((err => {
       console.log('error', err);
-    });
+      res.status(400).send({
+        message: err,
+      });
+    }));
 });
 
 app.listen(port, (err) => {

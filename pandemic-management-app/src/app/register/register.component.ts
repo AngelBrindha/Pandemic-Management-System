@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import Validation from '../validation';
 import { ToastrService } from 'ngx-toastr';
+import { ApiAngularService } from '../api-angular.service';
 
 @Component({
   selector: 'app-register',
@@ -14,6 +15,9 @@ import { ToastrService } from 'ngx-toastr';
 export class RegisterComponent implements OnInit {
   signUpForm: FormGroup;
   submitted = false;
+  check=0;
+  submit=false;
+  objectArray: any =[]
   
   userRecord: any ={
     fullName:'',
@@ -23,8 +27,9 @@ export class RegisterComponent implements OnInit {
     Confirmpassword:'',
 
    };
+  allData: any;
 
-   constructor(private api:ApiServiceService, private build:FormBuilder, private http:HttpClient, private router: Router,private toast: ToastrService) {
+   constructor(private api:ApiServiceService,private api1:ApiAngularService, private build:FormBuilder, private http:HttpClient, private router: Router,private toast: ToastrService) {
     this.signUpForm=this.build.group({
       fullName:[this.userRecord.fullName],
       Username :[this.userRecord.Username],
@@ -77,7 +82,11 @@ export class RegisterComponent implements OnInit {
       this.api.add(Formvalue).subscribe((data) => {
         console.log("data returned from server",data);
       this.toast.success('you are registered successfully');
+      },
+      (rej) => {
+        this.toast.error('Registeration Failed',rej);
       })
+      
       this.signUpForm.reset();
       this.submitted=true;
       if (this.signUpForm.invalid) {
@@ -88,6 +97,25 @@ export class RegisterComponent implements OnInit {
       this.router.navigate(['/login']);          
 
       
+    }
+    EmailValidity(){
+      const emailValue = this.signUpForm.value['email']
+      const email = {
+        'email':emailValue,
+        'type':'signup'
+      } 
+      this.api1.validate(email).subscribe((response:any)=>{
+        console.log(response)
+        if(response.docs.length >=1){
+        this.toast.error("Email Id already exist");
+        this.submit =false
+        }
+        else{
+          this.submit =true
+        }
+      },(err: any)=>{
+        console.error(err)
+      })
     }
     
     onReset():void {

@@ -20,12 +20,12 @@
                 <input type="radio" id="female" value="Female" name="gender" formControlName="gender">
                 <label for="female">Female</label><br>
             </div>
-            <div class="form-group" [class.has-error]="age.invalid && age.touched">
+            <div class="form-group" [class.has-error]="dob.invalid && dob.touched">
                 <label>Date of Birth :</label>
                 <input placeholder="Enter the dob" type="date" max="2015-12-31" class="form-control"
-                    formControlName="age" required>
-                <div class="help-block text-danger" *ngIf="age.touched">
-                    <span *ngIf="age.errors?.required">
+                    formControlName="dob" required>
+                <div class="help-block text-danger" *ngIf="dob.touched">
+                    <span *ngIf="dob.errors?.required">
                         DOB is REQUIRED!!!
                     </span>
                 </div>

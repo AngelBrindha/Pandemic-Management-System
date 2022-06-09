@@ -30,6 +30,20 @@ export class ApiAngularService {
     return this.http.post( url,data, this.httpOptions)
 
   }
+  validate(user:any){
+    const url =  this.url +'pandemic-db/_find';
+    const basicAuth = 'Basic ' + btoa(this.dbUserName + ':' + this. dbPassword );
+    const object = {
+      selector: {
+        type: user.type,
+        email: user.email
+      },
+    };
+  
+  return this.http.post(url, object, {
+    headers: { Authorization: basicAuth },
+  });
+}
   Delete(id: any,rev:any): Observable<{}>  {
   this.url= this.url+'pandemic-db/'+id+'?rev='+rev;
   return this.http.delete(this.url,this.httpOptions)

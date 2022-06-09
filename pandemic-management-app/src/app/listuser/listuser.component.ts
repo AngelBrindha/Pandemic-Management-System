@@ -55,10 +55,11 @@ export class ListuserComponent implements OnInit {
           this.api.Delete(id,rev).subscribe(res=>{
             console.log(res);
             window. location. reload();
+            alert("data deleted successfully");
   
           })
         } else {
-          window. location. reload();
+          alert("data deletion canceled");
         }
       }
       }

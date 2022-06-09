@@ -1,29 +1,31 @@
 <div class="background">
-    <button type="submit" class="btn btn-primary btn-block  mb-4" routerLink="/addvolunteer"
-        routerLinkActive="active-link">Add Volunteer</button>
-    <table>
-        <caption></caption>
-        <thead>
-            <tr>
-                <th>Volunteer Id </th>
-                <th>Volunteer Name</th>
-                <th>Email</th>
-                <th>Mobile Number </th>
-                <th>Incharge Location code</th>
-                <th>Delete</th>
+    <div class="container">
+        <button type="submit" class="btn  btn-block  mb-4" routerLink="/addvolunteer" routerLinkActive="active-link">Add
+            Volunteer</button>
+        <table>
+            <caption></caption>
+            <thead>
+                <tr>
+                    <th>Volunteer Id </th>
+                    <th>Volunteer Name</th>
+                    <th>Email</th>
+                    <th>Mobile Number </th>
+                    <th>Incharge Location code</th>
+                    <th>Delete</th>
 
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let volunteer of allVolunteerData">
-                <td>{{ volunteer.id}}</td>
-                <td>{{ volunteer.name}}</td>
-                <td>{{ volunteer.email }}</td>
-                <td>{{ volunteer.mobilenum }}</td>
-                <td>{{ volunteer.location }}</td>
-                <td><button class="delete" (click)="delete(volunteer._id,volunteer._rev)">Delete</button></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let volunteer of allVolunteerData">
+                    <td>{{ volunteer.id}}</td>
+                    <td>{{ volunteer.name}}</td>
+                    <td>{{ volunteer.email }}</td>
+                    <td>{{ volunteer.mobilenum }}</td>
+                    <td>{{ volunteer.location }}</td>
+                    <td><button class="delete" (click)="delete(volunteer._id,volunteer._rev)">Delete</button></td>
 
-            </tr>
-        </tbody>
-    </table>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

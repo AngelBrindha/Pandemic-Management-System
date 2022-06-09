@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { AppRoutingModule } from './app-routing.module';
-import { RouterModule, Routes} from '@angular/router'
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AppHeaderComponent } from './app-header/app-header.component';
@@ -26,23 +25,6 @@ import { ToastrModule } from 'ngx-toastr';
 import { AdminadduserComponent } from './adminadduser/adminadduser.component';
 import { RegisterComponent } from './register/register.component';
 import { ListcontactComponent } from './listcontact/listcontact.component';
-
-const routes: Routes =[
-  {path: '', component: HomeComponent},
-  {path: 'about', component: AboutComponent},
-  {path: 'register', component: RegisterComponent},
-  {path: 'dashboard', component: DashboardsComponent},
-  {path: 'contact', component: ContactComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'admin', component: AdminComponent},
-  {path: 'addvolunteer', component: AddvolunteerComponent},
-  {path: 'adduser', component: AdduserComponent},
-  {path: 'adminadduser', component: AdminadduserComponent},
-  {path: 'volunteerlogin', component: VolunteerLoginComponent},
-  {path: 'listvolunteer', component: ListvolunteerComponent},
-  {path: 'listuser', component: ListuserComponent},
-  {path: 'listcontact', component: ListcontactComponent},
-];
 
 
 @NgModule({
@@ -73,7 +55,6 @@ const routes: Routes =[
     MatToolbarModule,
     HttpClientModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(routes),
     ToastrModule.forRoot()
 
   ],

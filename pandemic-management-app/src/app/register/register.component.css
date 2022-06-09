@@ -1,6 +1,7 @@
 .volunteer {
   line-height: 2;
   display: flex;
+  overflow-x: hidden;
 }
 .left-col {
   width: 750px;
@@ -25,7 +26,7 @@
 }
 .content {
   background-color: #008cf5;
-  height: 1350px;
+  height: 1100px;
   padding: 100px;
 }
 .content img {
@@ -67,4 +68,10 @@ label {
   display: flex;
   margin: 0px 140px;
   gap: 20px;
+}
+input {
+  position: relative;
+}
+.invalid-feedback {
+  position: absolute;
 }

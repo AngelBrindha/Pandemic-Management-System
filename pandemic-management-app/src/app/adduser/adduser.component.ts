@@ -22,7 +22,7 @@ export class AdduserComponent implements OnInit {
     this.userForm = this.build.group({
       user:['',[Validators.required]],
       gender: ['',[Validators.required]],
-      age: ['',[Validators.required]],
+      dob: ['',[Validators.required]],
       loc: ['',[Validators.required],[Validators.pattern("[1-9]{1}[0-9]{5}$")]],
       mobile: ['',[Validators.required],[Validators.pattern("[0-9]{10}$")]],
       status: [''],
@@ -40,7 +40,7 @@ export class AdduserComponent implements OnInit {
     this.userForm = new FormGroup({
       user: new FormControl(''),
       gender: new FormControl(''),
-      age: new FormControl(''),
+      dob: new FormControl(''),
       loc: new FormControl(''),
       mobile: new FormControl(''),
       status: new FormControl(''),
@@ -55,7 +55,7 @@ export class AdduserComponent implements OnInit {
   }
   get user() {return this.userForm.get('user')!;}
   get gender() {return this.userForm.get('gender')!;}
-  get age() {return this.userForm.get('age')!;}
+  get dob() {return this.userForm.get('dob')!;}
   get loc() {return this.userForm.get('loc')!;}
   get mobile() {return this.userForm.get('mobile')!;}
   get status() {return this.userForm.get('status')!;}
@@ -69,7 +69,7 @@ export class AdduserComponent implements OnInit {
     const user = {
       user: Formvalue.user,
       gender: Formvalue.gender,
-      age: Formvalue.age,
+      dob: Formvalue.dob,
       loc: Formvalue.loc,
       mobile: Formvalue.mobile,
       status: Formvalue.status,
@@ -85,6 +85,9 @@ export class AdduserComponent implements OnInit {
       console.log(res);
       this.toast.success('data updated successfully');
       this.userForm.reset();
+    },
+    (_rej) => {
+      this.toast.error('Unable to update');
     });
     }
 
@@ -100,9 +103,9 @@ export class AdduserComponent implements OnInit {
   }
  }
  onChangeInputField(value: any) {
-  if (value == 'Yes') {
+  if (value == 'yes') {
   this.isInputFieldVisible = true;
-  } else if (value == 'No') {
+  } else if (value == 'no') {
   this.isInputFieldVisible = false;
 }
 }
