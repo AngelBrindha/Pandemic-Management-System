@@ -31,12 +31,13 @@ app.post('/signup', function (req, res) {
     .insert(signUpObject)
     .then((data) => {
       console.log('data inserted successfully ', data);
-    }).catch((err =>{
-      console.log("error",err);
+    })
+    .catch((err) => {
+      console.log('error', err);
       res.status(400).send({
-          message: err
-      })
-  }));
+        message: err,
+      });
+    });
 });
 
 app.get('/getdata/:id', (req, res) => {
@@ -55,12 +56,12 @@ app.get('/getdata/:id', (req, res) => {
       console.log('data fetch from db', data);
       res.send(data);
     })
-    .catch((err => {
-      console.log('error', err);
+    .catch((error) => {
+      console.log('error', error);
       res.status(400).send({
         message: err,
       });
-    }));
+    });
 });
 app.get('/getadmindata/:id', (_req, res) => {
   const adminObject = {
@@ -75,12 +76,12 @@ app.get('/getadmindata/:id', (_req, res) => {
       console.log('data fetch from db', data);
       res.send(data);
     })
-    .catch((err => {
-      console.log('error', err);
+    .catch((errr) => {
+      console.log('error', errr);
       res.status(400).send({
         message: err,
       });
-    }));
+    });
 });
 
 app.listen(port, (err) => {

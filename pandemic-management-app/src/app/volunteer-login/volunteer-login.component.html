@@ -18,15 +18,15 @@
         <div class="cards">
             <div class="card1">
                 <img src="../../images/blueuser.png" alt="icon" width="140px">
-                <button routerLink="/adduser" routerLinkActive="active-link"  >Add User</button>
+                <button routerLink="/adduser" routerLinkActive="active-link">Add User</button>
             </div>
             <div class="card2">
                 <img src="../../images/icons8-person-66.png" alt="icon" width="140px">
-                <button  routerLink="/listuser" routerLinkActive="active-link">List User</button>
+                <button routerLink="/listuser" routerLinkActive="active-link">List User</button>
             </div>
             <div class="card3">
                 <img src="../../images/icons8-contact-us-64.png" alt="icon" width="140px">
-                <button  routerLink="/listcontact" routerLinkActive="active-link">Customer Queries</button>
+                <button routerLink="/listcontact" routerLinkActive="active-link">Customer Queries</button>
             </div>
         </div>
         <div class="background">
@@ -50,7 +50,7 @@
                     <tr *ngFor="let user of allUserData">
                         <td>{{ user.user }}</td>
                         <td>{{ user.gender}}</td>
-                        <td>{{ user.age }}</td>
+                        <td>{{ user.dob }}</td>
                         <td>{{ user.loc }}</td>
                         <td>{{ user.mobile }}</td>
                         <td>{{ user.status }}</td>

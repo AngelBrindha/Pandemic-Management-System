@@ -65,7 +65,7 @@ export class AdminadduserComponent implements OnInit {
     const user = {
       user: Formvalue.user,
       gender: Formvalue.gender,
-      age: Formvalue.age,
+      dob: Formvalue.dob,
       loc: Formvalue.loc,
       mobile: Formvalue.mobile,
       status: Formvalue.status,
