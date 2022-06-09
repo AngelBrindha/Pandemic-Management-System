@@ -79,7 +79,7 @@ app.get('/getadmindata/:id', (_req, res) => {
     .catch((errr) => {
       console.log('error', errr);
       res.status(400).send({
-        message: err,
+        message: errr,
       });
     });
 });
