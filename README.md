@@ -20,6 +20,7 @@ who was incharge of the users.
     - Login (only for volunteers) ---> -Dashboard
                  -Add users
                  -List users
+                 -Customer Queries
     -Admin (only for admin) ---> -Admin Dasboard
                 -Add volunteers
                 -Add users
